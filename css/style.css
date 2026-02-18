@@ -1,0 +1,24 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+html, body {
+    min-height: 100vh;
+}
+
+main {
+    min-height: 100vh;
+}
+
+.home-img {
+    background-image: url("clothesimg.jpeg");
+    height: 70vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+main {
+    text-align: center;
+}
