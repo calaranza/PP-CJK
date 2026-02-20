@@ -23,6 +23,9 @@ main {
     text-align: center;
 }
 
+.featured .product-card img {
+    background-color: blue;
+}
 
 /* ========== LACEDA ========== */
 
