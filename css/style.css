@@ -26,6 +26,7 @@ main {
 .featured {
     display: flex;
     flex-direction: row;
+    justify-content: center;
 }
 
 .product-card {
