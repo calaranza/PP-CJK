@@ -23,7 +23,7 @@ main {
     text-align: center;
 }
 
-.featured {
+.featured:not(h1) {
     display: flex;
     flex-direction: row;
 }
