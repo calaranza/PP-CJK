@@ -34,6 +34,12 @@ main {
     max-width: 300px;
     margin-left: 15px;
     margin-right: 15px;
+    text-align: left;
+}
+
+.product-card h2, .product-card p {
+    padding-left: 12px;
+    padding-right: 12px;
 }
 
 .product-card img {
