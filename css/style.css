@@ -24,7 +24,7 @@ main {
 }
 
 .featured .product-card img {
-    background-color: blue;
+    width: 100%;
 }
 
 /* ========== LACEDA ========== */
