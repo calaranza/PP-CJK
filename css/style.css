@@ -23,7 +23,7 @@ main {
     text-align: center;
 }
 
-.featured {
+.featured, .click-imgs {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -48,12 +48,18 @@ main {
 
 .click-imgs div {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    max-width: 750px;
-    max-height: 400px;
+    width: 450px;
+    height: 270px;
     margin-left: 15px;
     margin-right: 15px;
-    background-color: midnightblue;
-    background-size: cover;
+    background-color: rgb(155, 196, 243);
+}
+
+.click-imgs a {
+    display: block;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
 }
 
 /* ========== LACEDA ========== */
