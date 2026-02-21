@@ -16,7 +16,7 @@ header a {
     margin: 0 40px;
 }
 
-.logo {
+header .logo {
     padding: 25px 50px;
     font-family: "Lucidity Expand";
     font-size: 32px;
