@@ -1,5 +1,4 @@
 footer {
-    height: 260px;
     padding: 60px;
     margin-top: 45px;
     border-top: 1px solid rgb(209, 209, 209);
@@ -21,8 +20,22 @@ footer h1 {
     font-size: 1em;
 }
 
+footer section {
+    width: 795px;
+}
+
 .footer-details {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-around;
+}
+
+.footer-details ul li {
+    list-style-type: none;
+    line-height: 2;
+}
+
+.footer-details a {
+    text-decoration: none;
+    color: black;
 }
