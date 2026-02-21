@@ -16,10 +16,6 @@ footer {
     letter-spacing: 6px;
 }
 
-footer h1 {
-    font-size: 1em;
-}
-
 footer section {
     width: 795px;
 }
@@ -28,6 +24,10 @@ footer section {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+}
+
+.footer-details h1 {
+    font-size: 1em;
 }
 
 .footer-details ul li {
