@@ -16,6 +16,10 @@ footer {
     letter-spacing: 6px;
 }
 
+.footer-logo {
+    width: 40%;
+}
+
 footer h1 {
     font-size: 1em;
 }
