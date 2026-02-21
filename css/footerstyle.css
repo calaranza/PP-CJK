@@ -8,16 +8,13 @@ footer {
     justify-content: space-between;
 }
 
-.footer-logo a {
+.footer-logo {
     color: black;
     text-decoration: none;
     font-family: "Lucidity Expand";
     font-size: 32px;
     letter-spacing: 6px;
-}
-
-.footer-logo {
-    width: 40%;
+    margin-right: 100px;
 }
 
 footer h1 {
