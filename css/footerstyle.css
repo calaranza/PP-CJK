@@ -63,4 +63,8 @@ footer section {
         padding: 0;
         margin: 0;
     }
+
+    footer section {
+        max-width: 100%;
+    }
 }
