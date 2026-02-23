@@ -68,23 +68,20 @@ main {
 }
 
 .contact-main {
+    margin-top: 45px;
     display: flex;
     flex-direction: row;
     justify-content: center;
-
-    /* display: grid;
-    grid-template-columns: auto auto; */
-
 }
 
 .contact-main section {
-    width: 730px;
+    width: 715px;
     text-align: left;
     background-color: burlywood;
 }
 
 .contact-descript {
-    padding: 30px 30px 30px 100px;
+    padding: 30px;
     margin-right: 15px;
 }
 
