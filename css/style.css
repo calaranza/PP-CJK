@@ -158,9 +158,141 @@ main h1 { font-family: "Lucidity Expand"; }
 
 /* ========== LACEDA ========== */
 
+/* COLLECTION */
+.collection {
+  padding: 40px 80px;
+  text-align: center;
+}
 
+.collection h1 {
+  margin-bottom: 40px;
+}
 
+/* GRID */
+.collection .product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
 
+.product-card {
+  cursor: pointer;
+}
+
+.collection .product-info {
+  padding: 10px;
+  text-align: left;
+}
+
+/* MODAL */
+.modal {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  top: 0;
+}
+
+.modal-content {
+  background: white;
+  width: 80%;
+  margin: 5% auto;
+  padding: 30px;
+}
+
+.close {
+  float: right;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+/* LAYOUT */
+.modal-layout {
+  display: flex;
+  gap: 50px;
+}
+
+/* GALLERY */
+.gallery {
+  width: 400px;
+}
+
+.main-image {
+  width: 100%;
+}
+
+.thumbnails {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.thumb {
+  width: 80px;
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.thumb.active {
+  opacity: 1;
+  border: 2px solid black;
+}
+
+/* PRODUCT DETAILS */
+.product-details {
+  text-align: left;
+}
+
+.price {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+/* SIZE BUTTONS */
+.sizes button {
+  padding: 10px 15px;
+  margin: 5px;
+  border: 1px solid black;
+  background: white;
+  cursor: pointer;
+}
+
+.sizes button.selected {
+  background: black;
+  color: white;
+}
+
+/* COLORS */
+.colors {
+  display: flex;
+  gap: 10px;
+  margin: 10px 0 20px;
+}
+
+.color {
+  width: 30px;
+  height: 30px;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.black { background: black; }
+.white { background: white; }
+.red { background: red; }
+
+.color.selected {
+  outline: 3px solid black;
+}
+
+/* ADD CART */
+.add-cart {
+  padding: 12px 25px;
+  background: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
 
 
 
