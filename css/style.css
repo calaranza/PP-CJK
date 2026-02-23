@@ -77,7 +77,6 @@ main {
 .contact-main section {
     width: 715px;
     text-align: left;
-    background-color: burlywood;
 }
 
 .contact-descript {
@@ -87,8 +86,27 @@ main {
 
 .contact-descript h1 {
     font-family: "Lucidity Expand";
-    margin: 0;
+    margin: 0 0 0 1.2em;
     padding: 0;
+}
+
+.contact-descript p {
+    margin-left: 2.5em;
+}
+
+.contact-descript ul li {
+    list-style-type: none;
+    line-height: 2;
+}
+
+.contact-descript a {
+    color: black;
+    text-decoration: none;
+}
+
+.cd-socmed-links {
+    font-size: 2em;
+    word-spacing: 5px;
 }
 
 .contact-form {
@@ -99,11 +117,27 @@ main {
 .contact-form input[type=text], input[type=tel], input[type=email], textarea, select {
     display: block;
     width: 100%;
+    padding: 5px;
+    font-size: medium;
+    margin: 8px 0;
+    border: 1px solid #acacac;
+    border-radius: 4px;
     box-sizing: border-box;
 }
 
 .contact-form input[type=submit] {
     width: 100%;
+    background-color: #04AA6D;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.contact-form input[type=submit]:hover {
+    background-color: #45a049;
 }
 
 /* ========== LACEDA ========== */
