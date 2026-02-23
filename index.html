@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
 	<title>Home - Lumine</title>
+    <script src="js/gallery.js"></script>
 	<link rel="stylesheet" href="css/headerstyle.css">
     <link rel="stylesheet" href="css/footerstyle.css">
     <link rel="stylesheet" href="css/style.css">
@@ -39,13 +40,13 @@
         <section class="product-grid">
             <div class="product-card" onclick="openProduct('crop')">
                 <img src="img/Lumine_Flower_Dress.jpg">
-                <b>Lumine Long Sleeve Crop</b>
+                <b>Lumine Autumn Flower Dress</b>
                 <p>₱1299</p>
             </div>
 
             <div class="product-card" onclick="openProduct('crop')">
-                <img src="img/Lumine_Flower_Dress.jpg">
-                <b>Lumine Long Sleeve Crop</b>
+                <img src="img/Lumine_Long_Sleeve_Crop_Navy_Front.jpeg">
+                <b>Lumine Long Sleeve Crop (Navy Blue)</b>
                 <p>₱1299</p>
             </div>
 
@@ -71,6 +72,43 @@
             </div>
         </section>
     </main>
+
+    <!-- PRODUCT MODAL -->
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div class="modal-layout">
+                <div class="gallery">
+                    <img id="mainImage" class="main-image">
+
+                    <div class="thumbnails">
+                        <img id="frontThumb" class="thumb" onclick="setMainImage(this.src)">
+                        <img id="backThumb" class="thumb" onclick="setMainImage(this.src)">
+                    </div>
+                </div>
+
+                <div class="product-details">
+                    <h2></h2>
+                    <p class="price"></p>
+
+                    <label>Size</label>
+                    <div class="sizes">
+                        <button>S</button>
+                        <button>M</button>
+                        <button>L</button>
+                        <button>XL</button>
+                    </div>
+
+                    <label>Color</label>
+                    <div class="colors"></div>
+
+                    <button class="add-cart">Add to Cart</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    
     <footer>
         <section class="footer-logo">
             <a href="index.html">LUMINE</a>
