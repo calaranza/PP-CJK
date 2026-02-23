@@ -7,10 +7,6 @@ html, body {
     min-height: 100vh;
 }
 
-main {
-    min-height: 100vh;
-}
-
 .home-img {
     background-image: url("clothesimg.jpeg");
     height: 70vh;

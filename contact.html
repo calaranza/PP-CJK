@@ -36,8 +36,27 @@
         <section></section>
         <section class="contact-form">
             <form method="POST">
-                <label>Name</label>
-                <input type="text">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name">
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone">
+
+                <label for="email">Email Address:</label>
+                <input type="email" id="email">
+
+                <label for="message">Message:</label>
+                <textarea id="message"></textarea>
+
+                <label for="survey">Survey: Where did you discover us?</label>
+                <select id="survey">
+                    <option></option>
+                    <option value="Social Media">Social Media</option>
+                    <option value="Family/Friends/Relatives">Family/Friends/Relatives</option>
+                    <option value="Advertisment">Advertisment</option>
+                    <option value="Search Engine">Search Engine</option>
+                    <option value="Newspaper">Newspaper</option>
+                </select>
             </form>
         </section>
     </main>
