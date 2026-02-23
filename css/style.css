@@ -15,9 +15,9 @@ html, body {
     background-size: cover;
 }
 
-main {
-    text-align: center;
-}
+main { text-align: center; }
+
+main h1 { font-family: "Lucidity Expand"; }
 
 .featured, .click-imgs {
     display: flex;
@@ -38,13 +38,9 @@ main {
     padding-right: 12px;
 }
 
-.product-card img {
-    width: 100%;
-}
+.product-card img { width: 100%; }
 
-.click-imgs {
-    margin-top: 15px;
-}
+.click-imgs { margin-top: 15px; }
 
 .click-imgs div {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
