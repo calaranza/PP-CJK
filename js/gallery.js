@@ -2,9 +2,17 @@
 const products = {
 
   // WOMEN
+  flowerdress: {
+    name: "Lumine Autumn Flower Dress",
+    price: "₱1199",
+    colors: {
+      orange: { front: "img/Lumine_Flower_Dress.jpg", back: "img/Lumine_Flower_Dress_Back.jpg" }
+    }
+  },
+
   crop: {
     name: "Lumine Long Sleeve Crop",
-    price: "₱1299",
+    price: "₱799",
     colors: {
       white: { front: "img/Lumine_Long_Sleeve_Crop_White_Front.jpeg", back: "img/Lumine_Long_Sleeve_Crop_White_Back.jpeg" },
       black: { front: "img/Lumine_Long_Sleeve_Crop_Black_Front.jpeg", back: "img/Lumine_Long_Sleeve_Crop_Black_Back.jpeg" },
@@ -16,7 +24,7 @@ const products = {
   // MEN
   mshirt: {
     name: "Lumine Shirt",
-    price: "₱999",
+    price: "₱799",
     colors: {
       black: { front: "img/Lumine_Shirt_Black_Front.jpeg", back: "img/Lumine_Shirt_Black_Back.jpeg" },
       white: { front: "img/Lumine_Shirt_White_Front.jpeg", back: "img/Lumine_Shirt_White_Back.jpeg" }
