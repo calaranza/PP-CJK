@@ -67,6 +67,8 @@ main {
     text-decoration: none;
 }
 
+/* =========== CONTACT PAGE =========== */
+
 .contact-main {
     margin-top: 45px;
     display: flex;
@@ -75,13 +77,14 @@ main {
 }
 
 .contact-main section {
-    width: 715px;
+    max-width: 725px;
     text-align: left;
+    margin-left: 15px;
+    margin-right: 15px;
 }
 
 .contact-descript {
     padding: 30px;
-    margin-right: 15px;
 }
 
 .contact-descript h1 {
@@ -110,8 +113,8 @@ main {
 }
 
 .contact-form {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     padding: 30px;
-    margin-left: 15px;
 }
 
 .contact-form input[type=text], input[type=tel], input[type=email], textarea, select {
@@ -127,8 +130,9 @@ main {
 
 .contact-form input[type=submit] {
     width: 100%;
-    background-color: #04AA6D;
+    background-color: rgb(125, 167, 216);
     color: white;
+    font-size: 1em;
     padding: 14px 20px;
     margin: 8px 0;
     border: none;
@@ -137,7 +141,18 @@ main {
 }
 
 .contact-form input[type=submit]:hover {
-    background-color: #45a049;
+    background-color: rgb(137, 177, 224);
+}
+
+@media screen and (max-width: 925px) {
+    .contact-main {
+        flex-direction: column;
+    }
+
+    .contact-descript p {
+        margin-right: 1.2em;
+    }
+
 }
 
 /* ========== LACEDA ========== */
