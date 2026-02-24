@@ -293,7 +293,147 @@ main h1 { font-family: "Lucidity Expand"; }
 /* ========== MENDOZA ========== */
 
 
+.title {
+	font-size: 20px;
+	text-align: center;
+} 
+.history{
+	font-size: 20px;
+	text-align: center;
+	max-width: 1300px; 
+	margin: 0 auto;   
+	text-align: justify; 
+	line-height: 1.6; 
+}
+.FAQ{
+	font-size: 20px;
+	text-align: center;
+	max-width: 800px;
+	margin: 0 auto; 
+}
 
+.Moa {
+ display: flex;              
+  align-items: center;        
+  gap: 20px;                  
+  padding: 70px;
+   
+}           
+.Moa_sec {
+  display: flex;         
+  align-items: center;    
+  gap: 40px;              
+  padding: 30px;
+  max-width: 900px;
+  margin: 40px auto;      
+}
+
+.img-Moa {
+  width: 500px;
+  height: auto;
+}
+
+.Moa_button {
+  display: flex;
+  flex-direction: column;     
+  justify-content: center;    
+}
+
+.Moa_button button {
+  margin-top: 10px;           
+  padding: 10px 20px;
+  background-color: blue;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.Moa_button button:hover {
+  background-color: darkblue; 
+}
+
+.Greenbelt {
+	display: flex;              
+	align-items: center;        
+	gap: 20px;                  
+	padding: 70px;
+}
+
+.Greenbelt_sec {
+  display: flex;    
+  flex-direction: row-reverse;  
+  align-items: center;    
+  gap: 40px;              
+  padding: 30px;
+  max-width: 900px;
+  margin: 40px auto;      
+}
+
+.img-Greenbelt {
+  width: 500px;
+  height: auto;
+}
+
+.Greenbelt_button {
+  display: flex;
+  flex-direction: column;     
+  justify-content: center;    
+}
+
+.Greenbelt_button button {
+  margin-top: 10px;           
+  padding: 10px 20px;
+  background-color: blue;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.Greenbelt_button button:hover {
+  background-color: darkblue; 
+}
+
+.Moa {
+ display: flex;              
+  align-items: center;        
+  gap: 20px;                  
+  padding: 70px;
+   
+}           
+.BGC_sec {
+  display: flex;         
+  align-items: center;    
+  gap: 40px;              
+  padding: 30px;
+  max-width: 900px;
+  margin: 40px auto;      
+}
+
+.img-BGC {
+  width: 500px;
+  height: auto;
+}
+
+.BGC_button {
+  display: flex;
+  flex-direction: column;     
+  justify-content: center;    
+}
+
+.BGC_button button {
+  margin-top: 10px;           
+  padding: 10px 20px;
+  background-color: blue;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.BGC_button button:hover {
+  background-color: darkblue; 
+}
 
 
 
