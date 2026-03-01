@@ -120,7 +120,7 @@ header nav .icon { display: none; }
 
     header.responsive .logo {
         position: absolute;
-        padding: 25px 0;
+        margin: 25px 0;
     }
 
     header.responsive .dropdown {
