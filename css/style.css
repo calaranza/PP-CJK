@@ -134,6 +134,8 @@ main h1 { font-family: "Lucidity Expand"; }
 
     .contact-main section {
         max-width: 100%;
+        margin: 0;
+        box-shadow: none;
     }
 
     .contact-descript p {
