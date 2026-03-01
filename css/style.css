@@ -126,6 +126,11 @@ main h1 { font-family: "Lucidity Expand"; }
     background-color: rgb(137, 177, 224);
 }
 
+.contact-form span {
+    color: gray;
+    font-style: italic;
+}
+
 @media screen and (max-width: 925px) {
     .contact-main {
         flex-direction: column;
