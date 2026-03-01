@@ -142,7 +142,7 @@ main h1 { font-family: "Lucidity Expand"; }
 
 }
 
-/* ========== LACEDA ========== */
+/* =========== PRODUCT CARDS =========== */
 
 /* GRID */
 .product-grid {
@@ -289,13 +289,35 @@ main h1 { font-family: "Lucidity Expand"; }
 
 
 
+/* =========== ABOUT PAGE =========== */
+.about-main h1 {
+    margin: 0;
+    padding: 0;
+}
 
+.history, .faqs {
+    padding: 30px;
+    max-width: 70%;
+    margin: 15px auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
 
-/* ========== MENDOZA ========== */
+.history p {
+    text-indent: 4rem;
+    text-align: justify;
+    line-height: 1cm;
+}
 
+.faqs dl {
+    text-align: left;
+    line-height: 1cm;
+}
 
-
-
+.faqs dt {
+    background-color: rgb(155, 196, 243);
+    padding: 0 10px;
+    font-weight: bold;
+}
 
 
 
