@@ -79,11 +79,10 @@ header nav .icon { display: none; }
         display: block;
         font-size: 24px;
         cursor: pointer;
-    }
 
-    .logo {
-        position: relative;
-        top: 0;
+        position: absolute;
+        right: 60px;
+        top: 30px;
     }
 }
 
@@ -112,14 +111,9 @@ header nav .icon { display: none; }
         padding: 10px;
     }
 
-    header.responsive .icon {
-        position: absolute;
-        right: 60px;
-        top: 30px;
-    }
-
     header.responsive .logo {
         position: absolute;
+        top: 0;
     }
 
     header.responsive .dropdown {
