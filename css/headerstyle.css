@@ -53,19 +53,19 @@ header .logo {
     transform: translateY(0px);
 }
 
-nav a:hover { text-decoration: underline; }
+header nav a:hover { text-decoration: underline; }
 
-nav a.logo:hover { text-decoration: none; }
+header a.logo:hover { text-decoration: none; }
 
 header nav .icon { display: none; }
 
 /* ========================================================================= */
 
-@media screen and (max-width: 1380px) { header a { margin: 0 24px; } }
+@media screen and (max-width: 1380px) { header nav a { margin: 0 25px; } }
 
-@media screen and (max-width: 1180px) { header a { margin: 0 15px; } }
+@media screen and (max-width: 1180px) { header nav a { margin: 0 15px; } }
 
-@media screen and (max-width: 1000px) { header a { margin: 0 10px; } }
+@media screen and (max-width: 1000px) { header nav a { margin: 0 10px; } }
 
 @media screen and (max-width: 925px) {
     nav a:not(.logo):not(.icon) {
