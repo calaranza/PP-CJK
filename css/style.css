@@ -340,75 +340,38 @@ main h1 { font-family: "Lucidity Expand"; }
 }
 
 
-/* =========== EVENTS PAGE =========== */
+/* =========== EVENTS AND STORES PAGE =========== */
 
-.event-sec {
+.event-sec, .loc-sec {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
 }
 
-.event-sec:nth-child(2) {
+.event-sec:nth-child(2), .loc-sec:nth-child(2) {
     flex-direction: row-reverse;
 }
 
-.event-sec div {
+.event-sec div, .loc-sec div {
     width: 100%;
 }
 
-.event-img img {
+.event-img img, .loc-img img {
     width: 100%;
     object-fit: cover;
 }
 
-.event-details {
+.event-details, .loc-details {
     margin: 30px;
 }
 
 @media screen and (max-width: 925px) {
-    .event-sec {
+    .event-sec, .loc-sec {
         flex-direction: column;
     }
 
-    .event-sec:nth-child(2) {
-        flex-direction: column;
-    }
-} 
-
-
-/* =========== STORES PAGE =========== */
-
-.loc-sec {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-
-.loc-sec:nth-child(2) {
-    flex-direction: row-reverse;
-}
-
-.loc-sec div {
-    width: 100%;
-}
-
-.loc-img img {
-    width: 100%;
-    object-fit: cover;
-}
-
-.loc-details {
-    margin: 30px;
-}
-
-@media screen and (max-width: 925px) {
-    .loc-sec {
-        flex-direction: column;
-    }
-
-    .loc-sec:nth-child(2) {
+    .event-sec:nth-child(2), .loc-sec:nth-child(2) {
         flex-direction: column;
     }
 } 
