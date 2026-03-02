@@ -354,17 +354,24 @@ main h1 { font-family: "Lucidity Expand"; }
 }
 
 .event-sec div {
-    max-width: 100%;
+    width: 100%;
 }
 
-.event-sec img {
-    width: 862px;
-    height: 600px;
-   /* aspect-ratio: 4 / 3; */
+.event-img img {
+    width: 100%;
     object-fit: cover;
-    
 }
 
 .event-details {
-    padding: 30px;
+    margin: 30px;
 }
+
+@media screen and (max-width: 925px) {
+    .event-sec {
+        flex-direction: column;
+    }
+
+    .event-sec:nth-child(2) {
+        flex-direction: column;
+    }
+} 
