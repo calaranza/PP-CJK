@@ -316,6 +316,10 @@ main h1 { font-family: "Lucidity Expand"; }
     line-height: 1cm;
 }
 
+.faqs h1 {
+    word-wrap: break-word;
+}
+
 .faqs dl {
     text-align: left;
     line-height: 1cm;
