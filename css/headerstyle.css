@@ -66,7 +66,7 @@ header nav .icon { display: none; }
 @media screen and (max-width: 1180px) { header a { margin: 0 15px; } }
 
 @media screen and (max-width: 1000px) { header a { margin: 0 10px; } }
-/*
+
 @media screen and (max-width: 925px) {
     nav a:not(.logo):not(.icon) {
         display: none;
@@ -135,100 +135,4 @@ header nav .icon { display: none; }
         visibility: visible;
         transform: none;
     }
-} */
-
-@media screen and (max-width: 925px) {
-    /* Remove display: none from here */
-    nav a:not(.logo):not(.icon) {
-        /* display: none; <-- DELETE THIS LINE */
-        
-        /* New Animation Properties */
-        
-        opacity: 0;
-        transform: translateY(-20px); /* Starts slightly higher up */
-        visibility: hidden; /* Makes it unclickable */
-        transition: all 0.4s ease; /* The speed and style of the animation */
-        width: 100%;
-    }
-
-    .dropdown { 
-        /* display: none; <-- DELETE THIS OR REPLACE WITH VISIBILITY */
-        opacity: 0;
-        visibility: hidden;
-    }
-
-    header nav .icon {
-        display: block;
-        font-size: 24px;
-        cursor: pointer;
-    }
-
-    .logo {
-        position: relative;
-        top: 0;
-    }
-}
-
-@media screen and (max-width: 925px) {
-    header.responsive {
-        flex-direction: column;
-        align-items: start;
-        padding-left: 30px;
-        padding-bottom: 30px;
-        
-        position: fixed;
-        width: 100%;
-        z-index: 100;
-        overflow-y: auto;
-    }
-
-    header.responsive nav:first-child {
-        position: static;
-        top: auto;
-        margin-top: 90px;
-    }
-
-    header.responsive nav a:not(.logo):not(.icon) {
-        /* display: block; <-- DELETE THIS */
-        
-        /* Make it visible */
-        opacity: 1;
-        transform: translateY(0); /* Slide down to original position */
-        visibility: visible;
-        width: 100%;
-        padding: 10px;
-        display: block;
-    }
-
-    header.responsive .icon {
-        position: absolute;
-        right: 60px;
-        top: 30px;
-    }
-
-    header.responsive .logo {
-        position: absolute;
-    }
-
-    header.responsive .dropdown {
-        opacity: 1;
-        visibility: visible;
-        width: 100%;
-    }
-
-    header.responsive .dropdown-menu {
-        position: relative;
-        background-color: #c1dfff;
-        box-shadow: none;
-        text-indent: 2rem;
-        visibility: visible;
-        transform: none;
-    }
-}
-
-/* Add this to the header.responsive block */
-
-header.responsive nav a:not(.logo):not(.icon):nth-child(1) { transition-delay: 0.1s; }
-header.responsive nav a:not(.logo):not(.icon):nth-child(2) { transition-delay: 0.2s; }
-header.responsive nav a:not(.logo):not(.icon):nth-child(3) { transition-delay: 0.3s; }
-header.responsive nav a:not(.logo):not(.icon):nth-child(4) { transition-delay: 0.4s; }
+} 
