@@ -345,7 +345,6 @@ main h1 { font-family: "Lucidity Expand"; }
 .event-sec, .loc-sec {
     display: flex;
     flex-direction: row;
-    justify-content: center;
     align-items: center;
 }
 
