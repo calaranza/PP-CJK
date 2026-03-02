@@ -375,3 +375,40 @@ main h1 { font-family: "Lucidity Expand"; }
         flex-direction: column;
     }
 } 
+
+
+/* =========== STORES PAGE =========== */
+
+.loc-sec {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.loc-sec:nth-child(2) {
+    flex-direction: row-reverse;
+}
+
+.loc-sec div {
+    width: 100%;
+}
+
+.loc-img img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.loc-details {
+    margin: 30px;
+}
+
+@media screen and (max-width: 925px) {
+    .loc-sec {
+        flex-direction: column;
+    }
+
+    .loc-sec:nth-child(2) {
+        flex-direction: column;
+    }
+} 
