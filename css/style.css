@@ -30,13 +30,13 @@ main h1 { font-family: "Lucidity Expand"; }
 .click-imgs div {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25);
     width: 795px;
-    height: 270px;
+    height: 300px;
     margin-left: 15px;
     margin-right: 15px;
     margin-bottom: 15px;
     background-color: rgb(155, 196, 243);
     text-align: center;
-    line-height: 270px;
+    line-height: 300px;
 }
 
 .click-imgs a {
