@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Women's Collection - Lumine</title>
-    <script src="js/gallery.js"></script>
-	<link rel="stylesheet" href="css/headerstyle.css">
+    <title>Women's Collection - Lumine</title>
+    <link rel="stylesheet" href="css/headerstyle.css">
     <link rel="stylesheet" href="css/footerstyle.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://db.onlinewebfonts.com/c/25df0280fec38f4b5ba0acf8fb265940?family=Lucidity+Expand" rel="stylesheet">
 </head>
 <body>
+
     <header id="myTopnav">
         <nav>
             <div class="dropdown">
@@ -26,12 +26,16 @@
             <a href="events.html">EVENTS</a>
             <a href="about.html">ABOUT</a>
         </nav>
+
         <a href="index.html" class="logo">LUMINE</a>
+
         <nav>
             <a href="stores.html">STORES</a>
             <a href="contact.html">CONTACT</a>
             <a href="cart.html">CART</a>
-            <a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
         </nav>
     </header>
 
@@ -53,51 +57,24 @@
 
             <div class="product-card" onclick="openProduct('crop')">
                 <img src="img/Lumine_Long_Sleeve_Crop_White_Front.jpeg">
-                <b>Product Name</b>
-                <p>Price</p>
+                <b>Classic Essential Tee</b>
+                <p>₱899</p>
             </div>
 
             <div class="product-card" onclick="openProduct('crop')">
                 <img src="img/Lumine_Long_Sleeve_Crop_White_Front.jpeg">
-                <b>Product Name</b>
-                <p>Price</p>
-            </div>
-        </section>
-        <section class="product-grid">
-            <div class="product-card" onclick="openProduct('crop')">
-                <img src="img/Lumine_Long_Sleeve_Crop_White_Front.jpeg">
-                <b>Product Name</b>
-                <p>Price</p>
-            </div>
-
-            <div class="product-card" onclick="openProduct('crop')">
-                <img src="img/Lumine_Long_Sleeve_Crop_White_Front.jpeg">
-                <b>Product Name</b>
-                <p>Price</p>
-            </div>
-
-            <div class="product-card" onclick="openProduct('crop')">
-                <img src="img/Lumine_Long_Sleeve_Crop_White_Front.jpeg">
-                <b>Product Name</b>
-                <p>Price</p>
-            </div>
-
-            <div class="product-card" onclick="openProduct('crop')">
-                <img src="img/Lumine_Long_Sleeve_Crop_White_Front.jpeg">
-                <b>Product Name</b>
-                <p>Price</p>
+                <b>Lumine Knit Sweater</b>
+                <p>₱1599</p>
             </div>
         </section>
     </main>
 
-    <!-- PRODUCT MODAL -->
     <div id="productModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal()">&times;</span>
             <div class="modal-layout">
                 <div class="gallery">
                     <img id="mainImage" class="main-image">
-
                     <div class="thumbnails">
                         <img id="frontThumb" class="thumb" onclick="setMainImage(this.src)">
                         <img id="backThumb" class="thumb" onclick="setMainImage(this.src)">
@@ -110,10 +87,10 @@
 
                     <label>Size</label>
                     <div class="sizes">
-                        <button>S</button>
-                        <button>M</button>
-                        <button>L</button>
-                        <button>XL</button>
+                        <button type="button">S</button>
+                        <button type="button">M</button>
+                        <button type="button">L</button>
+                        <button type="button">XL</button>
                     </div>
 
                     <label>Color</label>
@@ -129,6 +106,7 @@
         <section class="footer-logo">
             <a href="index.html">LUMINE</a>
         </section>
+
         <section class="footer-details">
             <div>
                 <h1>Locations</h1>
@@ -138,6 +116,7 @@
                     <li>Uptown Mall BGC</li>
                 </ul>
             </div>
+
             <div>
                 <h1>Contact</h1>
                 <ul>
@@ -153,12 +132,13 @@
             </div>
         </section>
     </footer>
+
+    <script src="js/gallery.js"></script>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            x.classList.toggle("responsive");    
+        }
+    </script>
 </body>
 </html>
-
-<script>
-    function myFunction() {
-        var x = document.getElementById("myTopnav");
-        x.classList.toggle("responsive");    
-    }
-</script>
