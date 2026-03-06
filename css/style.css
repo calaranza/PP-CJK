@@ -286,6 +286,8 @@ main h1 {
 .red   { background: red; }
 .navy  { background: #000080; }
 .grey, .gray { background: #808080; }
+.peach { background: #FFDAB9; } 
+.beige { background: #F5F5DC; }
 
 .color.selected {
     outline: 3px solid black;
