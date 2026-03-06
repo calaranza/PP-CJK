@@ -533,7 +533,7 @@ footer section {
     #myTopnav.responsive { flex-direction: column; align-items: flex-start; }
     #myTopnav.responsive nav { display: block; width: 100%; }
     
-    .product-grid { grid-template-columns: repeat(2, 1fr); }
+    .product-grid { grid-template-columns: repeat(1, 1fr); }
     .modal-layout { flex-direction: column; }
     .gallery { width: 100%; }
 
