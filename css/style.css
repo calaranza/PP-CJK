@@ -15,6 +15,7 @@ html {
 
 main {
     text-align: center;
+    min-height: 50vh;
 }
 
 main h1 { 
