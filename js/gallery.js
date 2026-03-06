@@ -18,7 +18,7 @@ const products = {
     colors: {
       white: { front: "img/Lumine_Flower_Dress.jpg", back: "img/Lumine_Flower_Dress.jpg" } 
     }
-  }
+  },
   cardigan: {
     name: "Lumine Cardigan",
     price: 899,
