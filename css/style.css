@@ -444,11 +444,10 @@ main h1 {
 }
 
 .event-img, .loc-img { flex: 1; }
-.event-text, .loc-text { flex: 1; padding: 50px; text-align: left; }
+.event-details, .loc-details { flex: 1; padding: 50px; text-align: left; }
 
 .event-img img, .loc-img img {
     width: 100%;
-    max-height: 500px;
     object-fit: cover;
 }
 
@@ -459,7 +458,6 @@ main h1 {
     border: none;
     text-transform: uppercase;
     font-size: 1rem;
-    margin: 10px;
 }
 
 /* =========================================
@@ -535,9 +533,11 @@ footer section {
 
     .contact-main { flex-direction: column; }
     
-    .event-sec, .loc-sec { flex-direction: column !important; }
-    .event-text, .loc-text { padding: 20px; }
+    .event-sec, .loc-sec { flex-direction: column-reverse !important; }
+    .event-img img, .loc-img img { aspect-ratio: 16 / 8; }
     
     footer { flex-direction: column; gap: 40px; }
     .footer-details { flex-direction: column; gap: 40px; }
 }
+
+
