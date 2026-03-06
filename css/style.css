@@ -54,7 +54,6 @@ main h1 {
     font-size: 1.5em;
     font-weight: bold;
     letter-spacing: 5px;
-    text-decoration: none;
     color: black;
     font-family: "Lucidity Expand", sans-serif;
     order: 4 !important;
@@ -69,7 +68,7 @@ main h1 {
     transition: 0.3s;
 }
 
-#myTopnav nav a:hover {
+#myTopnav nav a:not(.logo):hover {
     color: #7da7d8;
     text-decoration: underline;
 }
