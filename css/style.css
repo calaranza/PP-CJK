@@ -584,9 +584,7 @@ footer section {
     }
 
     #myTopnav.responsive nav a:not(.logo),
-    #myTopnav.responsive nav .dropdown {
-        display: block; 
-    }
+    #myTopnav.responsive nav .dropdown { display: block; }
 
     #myTopnav.responsive .dropdown-menu {
         display: block;
@@ -596,10 +594,7 @@ footer section {
         padding-left: 20px;
     }
 
-    #myTopnav.responsive .dropdown-menu a {
-        padding: 10px 0;
-    }
-
+    #myTopnav.responsive .dropdown-menu a { padding: 10px 0; }
 
     .product-grid { grid-template-columns: repeat(2, 1fr); }
     .modal-layout { flex-direction: column; }
@@ -616,6 +611,5 @@ footer section {
 
 @media screen and (max-width: 650px) {
     .product-grid { grid-template-columns: repeat(1, 1fr); }
-
 }
 
