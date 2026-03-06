@@ -115,8 +115,6 @@ main h1 {
     font-size: 2rem;
     color: white;
     text-shadow: 0px 3px 3px rgba(0,0,0,0.5);
-    white-space: normal;
-    overflow-wrap: break-word;
 }
 
 .home-img h1 {
