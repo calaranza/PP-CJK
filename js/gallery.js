@@ -4,7 +4,7 @@
 const products = {
   crop: {
     name: "Lumine Long Sleeve Crop",
-    price: 1299,
+    price: 899,
     colors: {
       white: { front: "img/Lumine_Long_Sleeve_Crop_White_Front.jpeg", back: "img/Lumine_Long_Sleeve_Crop_White_Back.jpeg" },
       black: { front: "img/Lumine_Long_Sleeve_Crop_Black_Front.jpeg", back: "img/Lumine_Long_Sleeve_Crop_Black_Back.jpeg" },
@@ -21,14 +21,14 @@ const products = {
   },
   cardigan: {
     name: "Lumine Cardigan",
-    price: 899,
+    price: 1299,
     colors: {
-      peach: { front: "img/Womens_Cardigan.png", back: "img/Womens_Cardigan.png" } 
+      pink: { front: "img/Womens_Cardigan.png", back: "img/Womens_Cardigan.png" } 
     }
   },
   sweatshirt: {
     name: "Lumine Sweater",
-    price: 1599,
+    price: 1199,
     colors: {
       white: { front: "img/Womens_Sweatshirt.png", back: "img/Womens_Sweatshirt.png" } 
     }
@@ -42,14 +42,14 @@ const products = {
   },
   msweater: {
     name: "Lumine Essential Sweater",
-    price: 1499,
+    price: 1299,
     colors: {
-      beige: { front: "img/Mens_Sweater.png", back: "img/Mens_Sweater.png" }
+      brown: { front: "img/Mens_Sweater.png", back: "img/Mens_Sweater.png" }
     }
   },
   mhoodie: {
     name: "Lumine Comfort Hoodie",
-    price: 1799,
+    price: 1199,
     colors: {
       white: { front: "img/Mens_Hoodie.png", back: "img/Mens_Hoodie.png" }
     }
