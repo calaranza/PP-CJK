@@ -105,7 +105,7 @@ function setMainImage(src) {
 // =========================================
 
 function openSizeChart() {
-    const chartImg = document.getElementById("chartImage");
+    const chartImg = document.getElementById("chartTb");
     const chartModal = document.getElementById("sizeChartModal");
     
     // Open using the old display method
