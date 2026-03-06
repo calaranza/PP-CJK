@@ -439,7 +439,12 @@ main h1 {
     margin-bottom: 40px;
 }
 
-.event-sec:nth-child(even), .loc-sec:nth-child(even) {
+.event-title, .loc-title {
+    padding: 30px;
+    margin-top: 15px;
+}
+
+.event-sec:nth-child(odd), .loc-sec:nth-child(odd) {
     flex-direction: row-reverse;
 }
 
