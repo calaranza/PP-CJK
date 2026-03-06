@@ -108,13 +108,6 @@ function openSizeChart() {
     const chartImg = document.getElementById("chartImage");
     const chartModal = document.getElementById("sizeChartModal");
     
-    // Auto-detect which chart to show based on the page filename
-    if (window.location.pathname.includes("women")) {
-        chartImg.src = "img/Women_Size_Chart.jpg";
-    } else {
-        chartImg.src = "img/Men_Size_Chart.jpg";
-    }
-    
     // Open using the old display method
     chartModal.style.display = "block";
 }
