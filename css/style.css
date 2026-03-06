@@ -530,6 +530,7 @@ footer section {
    ========================================= */
 @media screen and (max-width: 925px) {
     #myTopnav nav { display: none; }
+    #myTopnav { justify-content: space-between; }
     #myTopnav .icon { display: block; }
     
     #myTopnav.responsive { flex-direction: column; align-items: flex-start; }
