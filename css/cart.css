@@ -55,9 +55,8 @@ body{
     font-weight:bold;
 }
 
-.checkout-btn{
+.checkout {
     margin-top:20px;
-    float:right;
     padding:12px 20px;
     background:black;
     color:white;
