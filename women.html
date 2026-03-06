@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Women's Collection - Lumine</title>
-    <link rel="stylesheet" href="css/headerstyle.css">
-    <link rel="stylesheet" href="css/footerstyle.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://db.onlinewebfonts.com/c/25df0280fec38f4b5ba0acf8fb265940?family=Lucidity+Expand" rel="stylesheet">
@@ -44,25 +42,29 @@
 
         <section class="product-grid">
             <div class="product-card" onclick="openProduct('flowerdress')">
-                <img src="img/Lumine_Flower_Dress.jpg">
+                <img src="img/Lumine_Flower_Dress.jpg" alt="Flower Dress">
                 <b>Lumine Autumn Flower Dress</b>
                 <p>₱1299</p>
             </div>
 
             <div class="product-card" onclick="openProduct('crop')">
-                <img src="img/Lumine_Long_Sleeve_Crop_White_Front.jpeg">
+                <img src="img/Lumine_Long_Sleeve_Crop_White_Front.jpeg" alt="Crop Top">
                 <b>Lumine Long Sleeve Crop</b>
                 <p>₱1299</p>
             </div>
 
-            <div class="product-card" onclick="openProduct('crop')">
-                <img src="img/Lumine_Long_Sleeve_Crop_White_Front.jpeg">
+            <div class="product-card" style="cursor: default;">
+                <div style="width: 100%; height: 350px; background: #f9f9f9; display: flex; align-items: center; justify-content: center; color: #ccc;">
+                    <span>Coming Soon</span>
+                </div>
                 <b>Classic Essential Tee</b>
                 <p>₱899</p>
             </div>
 
-            <div class="product-card" onclick="openProduct('crop')">
-                <img src="img/Lumine_Long_Sleeve_Crop_White_Front.jpeg">
+            <div class="product-card" style="cursor: default;">
+                <div style="width: 100%; height: 350px; background: #f9f9f9; display: flex; align-items: center; justify-content: center; color: #ccc;">
+                    <span>Coming Soon</span>
+                </div>
                 <b>Lumine Knit Sweater</b>
                 <p>₱1599</p>
             </div>
@@ -74,10 +76,10 @@
             <span class="close" onclick="closeModal()">&times;</span>
             <div class="modal-layout">
                 <div class="gallery">
-                    <img id="mainImage" class="main-image">
+                    <img id="mainImage" class="main-image" src="">
                     <div class="thumbnails">
-                        <img id="frontThumb" class="thumb" onclick="setMainImage(this.src)">
-                        <img id="backThumb" class="thumb" onclick="setMainImage(this.src)">
+                        <img id="frontThumb" class="thumb" src="" onclick="setMainImage(this.src)">
+                        <img id="backThumb" class="thumb" src="" onclick="setMainImage(this.src)">
                     </div>
                 </div>
 
@@ -109,7 +111,7 @@
     <div id="sizeChartModal" class="modal chart-modal">
         <div class="modal-content chart-content">
             <span class="close" onclick="closeSizeChart()">&times;</span>
-            <img id="chartImage" src="" alt="Size Chart" style="width:100%">
+            <img id="chartImage" src="" alt="Size Chart">
         </div>
     </div>
 
@@ -123,33 +125,4 @@
                 <h1>Locations</h1>
                 <ul>
                     <li>SM Mall of Asia</li>
-                    <li>Greenbelt Makati</li>
-                    <li>Uptown Mall BGC</li>
-                </ul>
-            </div>
-
-            <div>
-                <h1>Contact</h1>
-                <ul>
-                    <li><a href="tel:+63280120123">+63 2 8012 0123</a></li>
-                    <li><a href="mailto:lumine_info@gmail.com">lumine_info@gmail.com</a></li>
-                    <li class="socmed-links">
-                        <a href="#" class="fa fa-facebook"></a>
-                        <a href="#" class="fa fa-twitter"></a>
-                        <a href="#" class="fa fa-instagram"></a>
-                        <a href="#" class="fa fa-youtube"></a>
-                    </li>
-                </ul>
-            </div>
-        </section>
-    </footer>
-
-    <script src="js/gallery.js"></script>
-    <script>
-        function myFunction() {
-            var x = document.getElementById("myTopnav");
-            x.classList.toggle("responsive");    
-        }
-    </script>
-</body>
-</html>
+                    <li>
