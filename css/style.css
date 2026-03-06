@@ -341,7 +341,7 @@ main h1 {
     width: 46%; 
     height: 300px;
     margin: 15px;
-    background-color: rgb(155, 196, 243);
+    background-color: rgb(125, 167, 216);
     text-align: center;
     line-height: 300px;
 }
@@ -408,8 +408,9 @@ main h1 {
 }
 
 .contact-form input[type=submit] {
-    background-color: rgb(125, 167, 216);
-    color: white;
+    background-color: rgb(125, 167, 216); 
+    color: black;
+    font-size: 1em;
     border: none;
     cursor: pointer;
 }
