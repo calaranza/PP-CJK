@@ -4,7 +4,7 @@
 const products = {
   crop: {
     name: "Lumine Long Sleeve Crop",
-    price: 1299,
+    price: 899,
     colors: {
       white: { front: "img/Lumine_Long_Sleeve_Crop_White_Front.jpeg", back: "img/Lumine_Long_Sleeve_Crop_White_Back.jpeg" },
       black: { front: "img/Lumine_Long_Sleeve_Crop_Black_Front.jpeg", back: "img/Lumine_Long_Sleeve_Crop_Black_Back.jpeg" },
