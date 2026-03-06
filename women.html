@@ -85,7 +85,11 @@
                     <h2></h2>
                     <p class="price"></p>
 
-                    <label>Size</label>
+                    <div class="size-header">
+                        <label>Size</label>
+                        <a href="javascript:void(0)" class="size-guide-btn" onclick="openSizeChart()">Size Guide</a>
+                    </div>
+                    
                     <div class="sizes">
                         <button type="button">S</button>
                         <button type="button">M</button>
@@ -99,6 +103,13 @@
                     <button class="add-cart">Add to Cart</button>
                 </div>
             </div>
+        </div>
+    </div>
+
+    <div id="sizeChartModal" class="modal chart-modal">
+        <div class="modal-content chart-content">
+            <span class="close" onclick="closeSizeChart()">&times;</span>
+            <img id="chartImage" src="" alt="Size Chart" style="width:100%">
         </div>
     </div>
 
