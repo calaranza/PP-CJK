@@ -99,7 +99,7 @@ main h1 {
    ========================================= */
 .home-img {
     background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1)), url("clothesimg.jpg");
-    height: 70vh;
+    height: 80vh;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -395,6 +395,14 @@ main h1 {
 }
 
 /* ABOUT */
+.about-img {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1)), url("clothesimg.jpg");
+    height: 80vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .history, .faqs {
     padding: 30px;
     max-width: 70%;
