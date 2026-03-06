@@ -32,7 +32,7 @@ const products = {
     colors: {
       white: { front: "img/Womens_Sweatshirt.png", back: "img/Womens_Sweatshirt.png" } 
     }
-  }
+  },
   mshirt: {
     name: "Lumine Classic Fit Shirt",
     price: 899,
