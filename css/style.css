@@ -450,6 +450,7 @@ main h1 {
 
 .event-img, .loc-img { flex: 1; }
 .event-details, .loc-details { flex: 1; padding: 50px; text-align: left; }
+.event-details h1 { margin-bottom: 15px; }
 
 .event-img img, .loc-img img {
     width: 100%;
