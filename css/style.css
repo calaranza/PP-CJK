@@ -30,9 +30,6 @@ main h1 {
    2. HEADER / NAVIGATION BAR
    ========================================= */
 #myTopnav {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
     padding: 20px 50px;
     background-color: white;
     position: sticky;
@@ -42,6 +39,17 @@ main h1 {
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
+#myTopnav nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%
+}
+
+#myTopnav nav > * {
+    order: 2;
+}
+
 .logo {
     font-size: 1.5em;
     font-weight: bold;
@@ -49,6 +57,7 @@ main h1 {
     text-decoration: none;
     color: black;
     font-family: "Lucidity Expand", sans-serif;
+    order: 4 !important;
 }
 
 #myTopnav nav a {
@@ -65,16 +74,22 @@ main h1 {
     text-decoration: underline;
 }
 
+#myTopnav nav .dropdown .shop {
+    pointer-events: none;
+}
+
 #myTopnav .icon {
     display: none;
     font-size: 24px;
     cursor: pointer;
+    color: black;
 }
 
 /* Dropdown Menu logic */
 .dropdown {
     display: inline-block;
     position: relative;
+    order: 1;
 }
 
 .dropdown-menu {
@@ -98,6 +113,12 @@ main h1 {
     display: block;
     font-size: 13px !important;
 }
+
+#myTopnav nav a:nth-child(3) { order: 2; } /* Events */
+#myTopnav nav a:nth-child(4) { order: 3; } /* About */
+#myTopnav nav a:nth-child(5) { order: 5; } /* Stores */
+#myTopnav nav a:nth-child(6) { order: 6; } /* Contact */
+#myTopnav nav a:nth-child(7) { order: 7; } /* Cart */
 
 /* =========================================
    3. HOME PAGE HERO
@@ -529,12 +550,14 @@ footer section {
    9. MEDIA QUERIES
    ========================================= */
 @media screen and (max-width: 925px) {
-    #myTopnav nav { display: none; }
+    #myTopnav nav a:not(.logo) { display: none; }
     #myTopnav { justify-content: space-between; }
     #myTopnav .icon { display: block; }
+    #myTopnav .dropdown-menu { display: none; }
     
-    #myTopnav.responsive { flex-direction: column; align-items: flex-start; }
-    #myTopnav.responsive nav { display: block; width: 100%; }
+    #myTopnav.responsive { align-items: flex-start; }
+    #myTopnav.responsive nav { display: flex; flex-direction: column; width: 100%; }
+    #myTopnav.responsive .dropdown .shop { pointer-events: all; }
     
     .product-grid { grid-template-columns: repeat(2, 1fr); }
     .modal-layout { flex-direction: column; }
