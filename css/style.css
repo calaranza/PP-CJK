@@ -52,15 +52,15 @@ main h1 {
 #myTopnav nav a {
     text-decoration: none;
     color: black;
-    margin: 0 15px;
+    margin: 0 20px;
     font-weight: bold;
-    font-size: 14px;
     text-transform: uppercase;
     transition: 0.3s;
 }
 
 #myTopnav nav a:hover {
     color: #7da7d8;
+    text-decoration: underline;
 }
 
 #myTopnav .icon {
