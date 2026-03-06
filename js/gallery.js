@@ -23,7 +23,7 @@ const products = {
     name: "Lumine Cardigan",
     price: 1299,
     colors: {
-      pink: { front: "img/Womens_Cardigan.png", back: "img/Womens_Cardigan.png" } 
+      peach: { front: "img/Womens_Cardigan.png", back: "img/Womens_Cardigan.png" } 
     }
   },
   sweatshirt: {
@@ -44,7 +44,7 @@ const products = {
     name: "Lumine Essential Sweater",
     price: 1299,
     colors: {
-      brown: { front: "img/Mens_Sweater.png", back: "img/Mens_Sweater.png" }
+      beige: { front: "img/Mens_Sweater.png", back: "img/Mens_Sweater.png" }
     }
   },
   mhoodie: {
