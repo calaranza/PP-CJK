@@ -424,7 +424,7 @@ main h1 {
    8. FOOTER
    ========================================= */
 footer {
-    background: #fdfdfd;
+    background: rgb(237, 237, 237);
     padding: 60px 80px;
     display: flex;
     justify-content: space-between;
@@ -432,16 +432,22 @@ footer {
     margin-top: 50px;
 }
 
+footer section {
+    max-width: 795px;
+    width: 100%;
+}
+
 .footer-logo a {
-    font-size: 24px;
-    font-weight: bold;
     text-decoration: none;
     color: black;
     letter-spacing: 5px;
+    margin-bottom: 20px;
+    font-family: "Lucidity Expand";
 }
 
 .footer-details {
     display: flex;
+    justify-content: space-around;
     gap: 100px;
 }
 
@@ -459,10 +465,17 @@ footer {
 .footer-details li {
     margin-bottom: 10px;
     font-size: 13px;
-    color: #666;
+    color: #4e4e4e;
+}
+
+.footer-details li a {
+    color: black;
+    text-decoration: none;
 }
 
 .socmed-links a {
+    font-size: 2em;
+    word-spacing: 5px;
     margin-right: 15px;
     font-size: 20px;
     color: black;
