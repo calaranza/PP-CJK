@@ -33,6 +33,34 @@ const products = {
       white: { front: "img/Womens_Sweatshirt.png", back: "img/Womens_Sweatshirt.png" } 
     }
   }
+  mshirt: {
+    name: "Lumine Classic Fit Shirt",
+    price: 899,
+    colors: {
+      white: { front: "img/Mens_Shirt.png", back: "img/Mens_Shirt.png" }
+    }
+  },
+  msweater: {
+    name: "Lumine Essential Sweater",
+    price: 1499,
+    colors: {
+      black: { front: "img/Mens_Sweater.png", back: "img/Mens_Sweater.png" }
+    }
+  },
+  mhoodie: {
+    name: "Lumine Comfort Hoodie",
+    price: 1799,
+    colors: {
+      gray: { front: "img/Mens_Hoodie.png", back: "img/Mens_Hoodie.png" }
+    }
+  },
+  mjacket: {
+    name: "Lumine Premium Leather Jacket",
+    price: 3499,
+    colors: {
+      black: { front: "img/Mens_Leather_Jacket.png", back: "img/Mens_Leather_Jacket.png" }
+    }
+  }
 };
 
 // Global variables to track selection
