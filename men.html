@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Men's Collection - Lumine</title>
-    <script src="js/gallery.js"></script>
+    <title>Men's Collection - Lumine</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://db.onlinewebfonts.com/c/25df0280fec38f4b5ba0acf8fb265940?family=Lucidity+Expand" rel="stylesheet">
@@ -39,32 +38,31 @@
 
         <section class="product-grid">
             <div class="product-card" onclick="openProduct('mshirt')">
-                <img src="img/product-img.png">
-                <b>Lumine Men's Product</b>
-                <p>Price</p>
+                <img src="img/Mens_Shirt.png" alt="Men's Shirt">
+                <b>Lumine Classic Fit Shirt</b>
+                <p>₱899</p>
             </div>
 
-            <div class="product-card" onclick="openProduct('mshirt')">
-                <img src="img/product-img.png">
-                <b>Lumine Men's Product</b>
-                <p>Price</p>
+            <div class="product-card" onclick="openProduct('msweater')">
+                <img src="img/Mens_Sweater.png" alt="Men's Sweater">
+                <b>Lumine Essential Sweater</b>
+                <p>₱1499</p>
             </div>
 
-            <div class="product-card" onclick="openProduct('mshirt')">
-                <img src="img/product-img.png">
-                <b>Lumine Men's Product</b>
-                <p>Price</p>
+            <div class="product-card" onclick="openProduct('mhoodie')">
+                <img src="img/Mens_Hoodie.png" alt="Men's Hoodie">
+                <b>Lumine Comfort Hoodie</b>
+                <p>₱1799</p>
             </div>
 
-            <div class="product-card" onclick="openProduct('mshirt')">
-                <img src="img/product-img.png">
-                <b>Lumine Men's Product</b>
-                <p>Price</p>
+            <div class="product-card" onclick="openProduct('mjacket')">
+                <img src="img/Mens_Leather_Jacket.png" alt="Men's Leather Jacket">
+                <b>Lumine Premium Leather Jacket</b>
+                <p>₱3499</p>
             </div>
         </section>
     </main>
 
-    <!-- PRODUCT MODAL -->
     <div id="productModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal()">&times;</span>
@@ -82,21 +80,31 @@
                     <h2></h2>
                     <p class="price"></p>
 
-                    <label>Size</label>
+                    <div class="size-header">
+                        <label>Size</label>
+                        <a href="javascript:void(0)" class="size-guide-btn" onclick="openSizeChart()">Size Guide</a>
+                    </div>
+                    
                     <div class="sizes">
-                        <button>S</button>
-                        <button>M</button>
-                        <button>L</button>
-                        <button>XL</button>
+                        <button type="button">S</button>
+                        <button type="button">M</button>
+                        <button type="button">L</button>
+                        <button type="button">XL</button>
                     </div>
 
                     <label>Color</label>
                     <div class="colors"></div>
 
                     <button class="add-cart">Add to Cart</button>
-
                 </div>
             </div>
+        </div>
+    </div>
+
+    <div id="sizeChartModal" class="modal chart-modal">
+        <div class="modal-content chart-content">
+            <span class="close" onclick="closeSizeChart()">&times;</span>
+            <img id="chartImage" src="" alt="Size Chart">
         </div>
     </div>
 
@@ -128,12 +136,7 @@
             </div>
         </section>
     </footer>
+
+    <script src="js/gallery.js"></script>
 </body>
 </html>
-
-<script>
-    function myFunction() {
-        var x = document.getElementById("myTopnav");
-        x.classList.toggle("responsive");    
-    }
-</script>
