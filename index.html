@@ -82,11 +82,10 @@
             <span class="close" onclick="closeModal()">&times;</span>
             <div class="modal-layout">
                 <div class="gallery">
-                    <img id="mainImage" class="main-image">
-
+                    <img id="mainImage" class="main-image" src="">
                     <div class="thumbnails">
-                        <img id="frontThumb" class="thumb" onclick="setMainImage(this.src)">
-                        <img id="backThumb" class="thumb" onclick="setMainImage(this.src)">
+                        <img id="frontThumb" class="thumb" src="" onclick="setMainImage(this.src)">
+                        <img id="backThumb" class="thumb" src="" onclick="setMainImage(this.src)">
                     </div>
                 </div>
 
@@ -94,21 +93,31 @@
                     <h2></h2>
                     <p class="price"></p>
 
-                    <label>Size</label>
+                    <div class="size-header">
+                        <label>Size</label>
+                        <a href="javascript:void(0)" class="size-guide-btn" onclick="openSizeChart()">Size Guide</a>
+                    </div>
+                    
                     <div class="sizes">
-                        <button>S</button>
-                        <button>M</button>
-                        <button>L</button>
-                        <button>XL</button>
+                        <button type="button">S</button>
+                        <button type="button">M</button>
+                        <button type="button">L</button>
+                        <button type="button">XL</button>
                     </div>
 
                     <label>Color</label>
                     <div class="colors"></div>
 
                     <button class="add-cart">Add to Cart</button>
-
                 </div>
             </div>
+        </div>
+    </div>
+
+    <div id="sizeChartModal" class="modal chart-modal">
+        <div class="modal-content chart-content">
+            <span class="close" onclick="closeSizeChart()">&times;</span>
+            <img id="chartImage" src="" alt="Size Chart">
         </div>
     </div>
 
