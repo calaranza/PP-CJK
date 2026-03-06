@@ -323,7 +323,7 @@ main h1 {
 #chartImage {
     width: 100%;
     height: auto;
-    display: block;
+    padding: 15px;
 }
 
 /* =========================================
