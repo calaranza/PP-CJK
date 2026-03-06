@@ -1,4 +1,6 @@
-// ===== 1. PRODUCT DATABASE =====
+// =========================================
+// 1. PRODUCT DATABASE
+// =========================================
 const products = {
   crop: {
     name: "Lumine Long Sleeve Crop",
@@ -19,35 +21,44 @@ const products = {
   }
 };
 
-// ===== 2. GLOBAL VARIABLES =====
+// Global variables to track selection
 let currentProduct = null;
 let currentColor = null;
 let currentSize = null;
 
-// ===== 3. MODAL FUNCTIONS =====
+// =========================================
+// 2. MAIN PRODUCT MODAL LOGIC
+// =========================================
+
 function openProduct(key) {
   currentProduct = products[key];
   if (!currentProduct) return;
 
-  document.getElementById("productModal").classList.add("show-modal");
+  // Set the modal to display block (The Old Method)
+  document.getElementById("productModal").style.display = "block";
+  
+  // Fill in the text details
   document.querySelector(".product-details h2").innerText = currentProduct.name;
   document.querySelector(".price").innerText = "₱" + currentProduct.price;
 
+  // Reset size selection when opening a new product
   currentSize = null;
   document.querySelectorAll(".sizes button").forEach(btn => btn.classList.remove("selected"));
 
+  // Create color swatches and set default image
   generateColors();
   const firstColor = Object.keys(currentProduct.colors)[0];
   changeColor(firstColor);
 }
 
 function closeModal() {
-  document.getElementById("productModal").classList.remove("show-modal");
+  document.getElementById("productModal").style.display = "none";
 }
 
 function generateColors() {
   const container = document.querySelector(".colors");
-  container.innerHTML = "";
+  container.innerHTML = ""; // Clear existing colors
+  
   for (let color in currentProduct.colors) {
     let span = document.createElement("span");
     span.className = "color " + color;
@@ -59,10 +70,13 @@ function generateColors() {
 function changeColor(color) {
   currentColor = color;
   const img = currentProduct.colors[color];
+  
+  // Update main image and thumbnails
   document.getElementById("mainImage").src = img.front;
   document.getElementById("frontThumb").src = img.front;
   document.getElementById("backThumb").src = img.back;
 
+  // Highlight selected color swatch
   document.querySelectorAll(".color").forEach(c => c.classList.remove("selected"));
   const activeColor = document.querySelector(".color." + color);
   if(activeColor) activeColor.classList.add("selected");
@@ -72,28 +86,36 @@ function setMainImage(src) {
   document.getElementById("mainImage").src = src;
 }
 
-// ===== 4. SIZE CHART LOGIC =====
+// =========================================
+// 3. SIZE CHART MODAL LOGIC
+// =========================================
+
 function openSizeChart() {
-    const chartModal = document.getElementById("sizeChartModal");
     const chartImg = document.getElementById("chartImage");
+    const chartModal = document.getElementById("sizeChartModal");
     
-    // Check path for Women vs Men
+    // Auto-detect which chart to show based on the page filename
     if (window.location.pathname.includes("women")) {
         chartImg.src = "img/Women_Size_Chart.jpg";
     } else {
         chartImg.src = "img/Men_Size_Chart.jpg";
     }
     
-    chartModal.classList.add("show-modal");
+    // Open using the old display method
+    chartModal.style.display = "block";
 }
 
 function closeSizeChart() {
-    document.getElementById("sizeChartModal").classList.remove("show-modal");
+    document.getElementById("sizeChartModal").style.display = "none";
 }
 
-// ===== 5. EVENT LISTENERS =====
+// =========================================
+// 4. CART & NAVIGATION EVENT LISTENERS
+// =========================================
+
 document.addEventListener("DOMContentLoaded", () => {
-  // Sizing Buttons
+  
+  // Size Button Selection Logic
   const sizeBtns = document.querySelectorAll(".sizes button");
   sizeBtns.forEach(btn => {
     btn.addEventListener("click", function() {
@@ -103,7 +125,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Add to Cart
+  // Add to Cart Functionality
   const addBtn = document.querySelector(".add-cart");
   if(addBtn) {
     addBtn.addEventListener("click", () => {
@@ -111,6 +133,7 @@ document.addEventListener("DOMContentLoaded", () => {
         alert("Please select a size first! 📏");
         return;
       }
+      
       let cart = JSON.parse(localStorage.getItem("cart")) || [];
       cart.push({
         name: currentProduct.name,
@@ -119,17 +142,33 @@ document.addEventListener("DOMContentLoaded", () => {
         size: currentSize,
         image: currentProduct.colors[currentColor].front
       });
+      
       localStorage.setItem("cart", JSON.stringify(cart));
-      alert("Added to cart! 🛒");
+      alert(currentProduct.name + " (Size: " + currentSize + ") added to cart! 🛒");
       closeModal();
     });
   }
 });
 
-// Close when clicking background
+// Navigation Toggle for Mobile (Hamburger Menu)
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+
+// Close Modals when user clicks the background overlay
 window.onclick = function(event) {
-    if (event.target.classList.contains('modal')) {
+    const productModal = document.getElementById("productModal");
+    const chartModal = document.getElementById("sizeChartModal");
+    
+    if (event.target == productModal) {
         closeModal();
+    }
+    if (event.target == chartModal) {
         closeSizeChart();
     }
 }
