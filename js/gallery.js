@@ -19,6 +19,20 @@ const products = {
       white: { front: "img/Lumine_Flower_Dress.jpg", back: "img/Lumine_Flower_Dress.jpg" } 
     }
   }
+  cardigan: {
+    name: "Lumine Cardigan",
+    price: 899,
+    colors: {
+      peach: { front: "img/Womens_Cardigan.png", back: "img/Womens_Cardigan.png" } 
+    }
+  },
+  sweatshirt: {
+    name: "Lumine Sweater",
+    price: 1599,
+    colors: {
+      white: { front: "img/Womens_Sweatshirt.png", back: "img/Womens_Sweatshirt.png" } 
+    }
+  }
 };
 
 // Global variables to track selection
