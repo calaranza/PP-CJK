@@ -304,3 +304,30 @@ main h1 {
         max-width: 90%;
     }
 }
+
+/* SIZE GUIDE STYLING */
+.size-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.size-guide-btn {
+    font-size: 13px;
+    text-decoration: underline;
+    color: #333;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.chart-modal {
+    z-index: 3000; /* Stays on top of the product modal */
+}
+
+.chart-content {
+    max-width: 700px;
+    margin: 5% auto;
+    border: 2px solid black;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
