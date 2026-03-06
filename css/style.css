@@ -6,11 +6,9 @@
     src: url("../fonts/LucidityExpand.ttf");
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
-
 body {
     margin: 0;
-    font-family: "Figree", Arial, sans-serif;
+    font-family: 'Helvetica', 'Arial', sans-serif;
     min-height: 100vh;
     background-color: #fff;
 }
