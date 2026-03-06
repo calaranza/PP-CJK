@@ -20,6 +20,8 @@ main {
 
 main h1 { 
     font-family: "Lucidity Expand", sans-serif; 
+    margin: 0;
+    padding: 0;
 }
 
 /* =========================================
@@ -98,7 +100,7 @@ main h1 {
    3. HOME PAGE HERO
    ========================================= */
 .home-img {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1)), url("clothesimg.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1)), url("clothesimg.jpg");
     height: 80vh;
     background-position: center;
     background-repeat: no-repeat;
@@ -396,27 +398,36 @@ main h1 {
 
 /* ABOUT */
 .about-img {
-    background-image: url("aboutimg.jpg");
-    height: 80vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1)), url("aboutimg.jpg");
+    height: 40vh;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    color: white;
+    text-shadow: 0px 3px 3px rgba(0,0,0,0.5);
 }
 
 .history, .faqs {
     padding: 30px;
-    max-width: 70%;
-    margin: 15px auto;
+    max-width: 60%;
+    margin: 30px auto;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25);
     background: white;
-    text-align: left;
+    text-align: justify;
 }
+
+.history h1, .faqs h1 { text-align: center; }
 
 .faqs dt {
     background-color: #c1dfff;
     padding: 10px;
     font-weight: bold;
-    margin-top: 10px;
+    margin: 10px 0;
 }
 
 /* EVENTS & STORES */
