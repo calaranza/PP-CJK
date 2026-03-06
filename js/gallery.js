@@ -44,14 +44,14 @@ const products = {
     name: "Lumine Essential Sweater",
     price: 1499,
     colors: {
-      black: { front: "img/Mens_Sweater.png", back: "img/Mens_Sweater.png" }
+      beige: { front: "img/Mens_Sweater.png", back: "img/Mens_Sweater.png" }
     }
   },
   mhoodie: {
     name: "Lumine Comfort Hoodie",
     price: 1799,
     colors: {
-      gray: { front: "img/Mens_Hoodie.png", back: "img/Mens_Hoodie.png" }
+      white: { front: "img/Mens_Hoodie.png", back: "img/Mens_Hoodie.png" }
     }
   },
   mjacket: {
