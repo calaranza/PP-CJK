@@ -396,7 +396,7 @@ main h1 {
 
 /* ABOUT */
 .about-img {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1)), url("clothesimg.jpg");
+    background-image: url("aboutimg.jpg");
     height: 80vh;
     background-position: center;
     background-repeat: no-repeat;
