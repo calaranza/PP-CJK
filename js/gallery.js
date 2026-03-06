@@ -1,84 +1,125 @@
-// ===== PRODUCT DATABASE =====
+// ===== 1. PRODUCT DATABASE =====
 const products = {
-
-  // WOMEN
-  flowerdress: {
-    name: "Lumine Autumn Flower Dress",
-    price: "₱1199",
-    colors: {
-      orange: { front: "img/Lumine_Flower_Dress.jpg", back: "img/Lumine_Flower_Dress_Back.jpg" }
-    }
-  },
-
   crop: {
     name: "Lumine Long Sleeve Crop",
-    price: "₱799",
+    price: 1299,
     colors: {
       white: { front: "img/Lumine_Long_Sleeve_Crop_White_Front.jpeg", back: "img/Lumine_Long_Sleeve_Crop_White_Back.jpeg" },
       black: { front: "img/Lumine_Long_Sleeve_Crop_Black_Front.jpeg", back: "img/Lumine_Long_Sleeve_Crop_Black_Back.jpeg" },
       navy: { front: "img/Lumine_Long_Sleeve_Crop_Navy_Front.jpeg", back: "img/Lumine_Long_Sleeve_Crop_Navy_Back.jpeg" },
-      grey: { front: "img/Lumine_Long_Sleeve_Crop_Grey_Front.jpeg", back: "img/Lumine_Long_Sleeve_Crop_Grey_Back.jpeg" }
+      gray: { front: "img/Lumine_Long_Sleeve_Crop_Grey_Front.jpeg", back: "img/Lumine_Long_Sleeve_Crop_Grey_Back.jpeg" }
     }
   },
-
-  // MEN
-  mshirt: {
-    name: "Lumine Shirt",
-    price: "₱799",
+  flowerdress: {
+    name: "Lumine Autumn Flower Dress",
+    price: 1299,
     colors: {
-      black: { front: "img/Lumine_Shirt_Black_Front.jpeg", back: "img/Lumine_Shirt_Black_Back.jpeg" },
-      white: { front: "img/Lumine_Shirt_White_Front.jpeg", back: "img/Lumine_Shirt_White_Back.jpeg" }
+      white: { front: "img/Lumine_Flower_Dress.jpg", back: "img/Lumine_Flower_Dress.jpg" } 
     }
   }
+};
 
-}; // <-- close the products object
+// ===== 2. GLOBAL VARIABLES =====
+let currentProduct = null;
+let currentColor = null;
+let currentSize = null;
 
-// ===== GLOBAL VARIABLE =====
-let currentProduct; // needs to be accessible to all functions
-
-// ===== OPEN PRODUCT =====
+// ===== 3. MODAL FUNCTIONS =====
 function openProduct(key) {
   currentProduct = products[key];
+  if (!currentProduct) return;
+
   document.getElementById("productModal").style.display = "block";
-
   document.querySelector(".product-details h2").innerText = currentProduct.name;
-  document.querySelector(".price").innerText = currentProduct.price;
+  document.querySelector(".price").innerText = "₱" + currentProduct.price;
 
+  // Reset Size Selection
+  currentSize = null;
+  document.querySelectorAll(".sizes button").forEach(btn => btn.classList.remove("selected"));
+
+  // Setup Colors
   generateColors();
-
-  let first = Object.keys(currentProduct.colors)[0];
-  changeColor(first);
+  const firstColor = Object.keys(currentProduct.colors)[0];
+  changeColor(firstColor);
 }
 
-// ===== CLOSE MODAL =====
 function closeModal() {
   document.getElementById("productModal").style.display = "none";
 }
 
-// ===== COLOR BUTTONS =====
 function generateColors() {
   const container = document.querySelector(".colors");
   container.innerHTML = "";
-
   for (let color in currentProduct.colors) {
     let span = document.createElement("span");
     span.className = "color " + color;
     span.onclick = () => changeColor(color);
-
     container.appendChild(span);
   }
 }
 
-// ===== CHANGE COLOR =====
 function changeColor(color) {
+  currentColor = color;
   const img = currentProduct.colors[color];
-
   document.getElementById("mainImage").src = img.front;
   document.getElementById("frontThumb").src = img.front;
   document.getElementById("backThumb").src = img.back;
+
+  // UI Selection Highlight
+  document.querySelectorAll(".color").forEach(c => c.classList.remove("selected"));
+  const activeColor = document.querySelector(".color." + color);
+  if(activeColor) activeColor.classList.add("selected");
 }
 
-// ===== SWITCH IMAGE =====
 function setMainImage(src) {
   document.getElementById("mainImage").src = src;
 }
+
+// ===== 4. SIZING & ADD TO CART LOGIC =====
+// This ensures the code only runs AFTER the HTML is fully loaded on the screen
+document.addEventListener("DOMContentLoaded", () => {
+  
+  // Sizing Buttons
+  const sizeBtns = document.querySelectorAll(".sizes button");
+  sizeBtns.forEach(btn => {
+    btn.addEventListener("click", function(e) {
+      e.preventDefault(); // Stop any default button behavior
+      
+      // Remove 'selected' from all buttons, add to the clicked one
+      sizeBtns.forEach(b => b.classList.remove("selected"));
+      this.classList.add("selected");
+      
+      // Store the size
+      currentSize = this.innerText; 
+    });
+  });
+
+  // Add to Cart Button
+  const addBtn = document.querySelector(".add-cart");
+  if(addBtn) {
+    addBtn.addEventListener("click", function(e) {
+      e.preventDefault();
+      
+      if (!currentSize) {
+        alert("Please select a size first! 📏");
+        return;
+      }
+
+      const item = {
+        name: currentProduct.name,
+        price: currentProduct.price,
+        color: currentColor,
+        size: currentSize,
+        image: currentProduct.colors[currentColor].front
+      };
+
+      // Get existing cart from memory, add new item, save it back
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+      cart.push(item);
+      localStorage.setItem("cart", JSON.stringify(cart));
+      
+      alert("Added to cart! 🛒");
+      closeModal();
+    });
+  }
+});
