@@ -14,7 +14,6 @@ html {
 }
 
 main {
-    min-height: 100vh;
     text-align: center;
 }
 
@@ -353,7 +352,29 @@ main h1 {
     background: white;
 }
 
-.contact-form input, 
+.contact-descript ul {
+    line-height: 2;
+    list-style: none;
+    color: black;
+    padding: 0;
+}
+
+.contact-descript li:first-child {
+    margin-top: 2em;
+}
+
+.contact-descript a {
+    text-decoration: none;
+    color: black;
+}
+
+.cd-socmed-links a {
+    margin-top: 15px;
+    font-size: 2.2em;
+    margin-right: 6px;
+}
+
+.contact-form input:not([type=checkbox]), 
 .contact-form textarea, 
 .contact-form select {
     display: block;
@@ -474,7 +495,7 @@ footer section {
 .socmed-links a {
     margin-top: 15px;
     font-size: 2.2em;
-    word-spacing: 10px;
+    margin-right: 6px;
 }
 
 /* =========================================
@@ -490,6 +511,8 @@ footer section {
     .product-grid { grid-template-columns: repeat(2, 1fr); }
     .modal-layout { flex-direction: column; }
     .gallery { width: 100%; }
+
+    .contact-main { flex-direction: column; }
     
     .event-sec, .loc-sec { flex-direction: column !important; }
     .event-text, .loc-text { padding: 20px; }
