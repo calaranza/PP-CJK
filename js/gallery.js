@@ -16,7 +16,7 @@ const products = {
     name: "Lumine Autumn Flower Dress",
     price: 1299,
     colors: {
-      white: { front: "img/Lumine_Flower_Dress.jpg", back: "img/Lumine_Flower_Dress.jpg" } 
+      white: { front: "img/Lumine_Flower_Dress.jpg", back: "img/Lumine_Flower_Dress_Back.jpg" } 
     }
   },
   cardigan: {
