@@ -1,10 +1,16 @@
 /* =========================================
-   BASE STYLES & SHARED LAYOUT
+   1. GLOBAL & FONT STYLES
    ========================================= */
+@font-face {
+    font-family: "Lucidity Expand";
+    src: url("../fonts/LucidityExpand.ttf");
+}
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
     min-height: 100vh;
+    background-color: #fff;
 }
 
 html {
@@ -20,6 +26,81 @@ main h1 {
     font-family: "Lucidity Expand", sans-serif; 
 }
 
+/* =========================================
+   2. NAVIGATION BAR (MENDOZA/LACEDA COMBINED)
+   ========================================= */
+#myTopnav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: white;
+    position: sticky;
+    top: 0;
+    z-index: 2000;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    text-decoration: none;
+    color: black;
+    font-family: "Lucidity Expand", sans-serif;
+}
+
+#myTopnav nav a {
+    text-decoration: none;
+    color: black;
+    margin: 0 15px;
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+#myTopnav nav a:hover {
+    color: #7da7d8;
+}
+
+#myTopnav .icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Dropdown Menu logic */
+.dropdown {
+    display: inline-block;
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
+    z-index: 1;
+    text-align: left;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 13px !important;
+}
+
+/* =========================================
+   3. HOME PAGE HERO
+   ========================================= */
 .home-img {
     background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1)), url("../img/clothesimg.jpeg");
     height: 70vh;
@@ -42,7 +123,7 @@ main h1 {
 }
 
 /* =========================================
-   PRODUCT COLLECTION & GRID (LACEDA)
+   4. PRODUCT COLLECTION & GRID
    ========================================= */
 .collection {
     padding: 40px 80px;
@@ -81,24 +162,24 @@ main h1 {
     display: block;
 }
 
+.product-card b {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
 /* =========================================
-   MODAL CORE (PRODUCT & SIZE CHART)
+   5. PRODUCT MODAL 
    ========================================= */
 .modal {
     display: none;
     position: fixed;
-    z-index: 1000;
+    z-index: 3000;
     width: 100%;
     height: 100%;
     background: rgba(0,0,0,0.7);
     top: 0;
     left: 0;
     overflow: auto;
-}
-
-/* Used by JS to show the modal */
-.show-modal {
-    display: block !important;
 }
 
 .modal-content {
@@ -108,6 +189,7 @@ main h1 {
     margin: 5% auto;
     padding: 30px;
     position: relative;
+    box-sizing: border-box;
 }
 
 .close {
@@ -124,7 +206,7 @@ main h1 {
 }
 
 .gallery { width: 400px; }
-.main-image { width: 100%; height: auto; }
+.main-image { width: 100%; height: auto; border: 1px solid #f0f0f0; }
 .thumbnails { display: flex; gap: 10px; margin-top: 10px; }
 
 .thumb {
@@ -136,15 +218,15 @@ main h1 {
     border: 1px solid transparent;
 }
 
-.thumb:hover {
+.thumb.active, .thumb:hover {
     opacity: 1;
-    border: 1px solid black;
+    border: 2px solid black;
 }
 
 .product-details { text-align: left; flex: 1; }
 .price { font-size: 24px; font-weight: bold; margin-bottom: 20px; }
 
-/* SIZE & COLOR PICKERS */
+/* Sizes & Colors in Modal */
 .size-header {
     display: flex;
     justify-content: space-between;
@@ -184,6 +266,7 @@ main h1 {
 
 .black { background: black; }
 .white { background: white; border: 1px solid #ccc; }
+.red   { background: red; }
 .navy  { background: #000080; }
 .grey, .gray { background: #808080; }
 
@@ -201,26 +284,34 @@ main h1 {
     font-weight: bold;
     width: 100%;
     margin-top: 20px;
+    text-transform: uppercase;
 }
 
-/* SIZE CHART SPECIFIC (MENDOZA) */
+/* =========================================
+   6. SIZE CHART MODAL (LAYERED)
+   ========================================= */
 .chart-modal {
-    z-index: 3000 !important; 
+    z-index: 4000; /* Stays above product modal */
 }
 
 .chart-content {
     max-width: 600px;
-    margin: 2% auto;
+    margin: 5% auto;
     border: 2px solid black;
     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-    padding: 15px;
+    padding: 10px;
+    background: white;
+}
+
+#chartImage {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 /* =========================================
-   PAGES: CONTACT, ABOUT, EVENTS (MENDOZA)
+   7. CONTACT, ABOUT, & EVENTS
    ========================================= */
-
-/* HOME CATEGORY IMGS */
 .click-imgs {
     display: flex;
     justify-content: center;
@@ -247,7 +338,7 @@ main h1 {
     text-decoration: none;
 }
 
-/* CONTACT PAGE */
+/* CONTACT */
 .contact-main {
     margin-top: 45px;
     display: flex;
@@ -266,7 +357,9 @@ main h1 {
     background: white;
 }
 
-.contact-form input, .contact-form textarea, .contact-form select {
+.contact-form input, 
+.contact-form textarea, 
+.contact-form select {
     display: block;
     width: 100%;
     padding: 10px;
@@ -283,13 +376,14 @@ main h1 {
     cursor: pointer;
 }
 
-/* ABOUT PAGE */
+/* ABOUT */
 .history, .faqs {
     padding: 30px;
     max-width: 70%;
     margin: 15px auto;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25);
     background: white;
+    text-align: left;
 }
 
 .faqs dt {
@@ -304,16 +398,15 @@ main h1 {
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 
 .event-sec:nth-child(even), .loc-sec:nth-child(even) {
     flex-direction: row-reverse;
 }
 
-.event-img, .loc-img, .event-text, .loc-text {
-    flex: 1;
-}
+.event-img, .loc-img { flex: 1; }
+.event-text, .loc-text { flex: 1; padding: 50px; text-align: left; }
 
 .event-img img, .loc-img img {
     width: 100%;
@@ -321,36 +414,72 @@ main h1 {
     object-fit: cover;
 }
 
-.event-text, .loc-text {
-    padding: 40px;
-    text-align: left;
+/* =========================================
+   8. FOOTER
+   ========================================= */
+footer {
+    background: #fdfdfd;
+    padding: 60px 80px;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #eee;
+    margin-top: 50px;
+}
+
+.footer-logo a {
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+    letter-spacing: 5px;
+}
+
+.footer-details {
+    display: flex;
+    gap: 100px;
+}
+
+.footer-details div h1 {
+    font-size: 14px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.footer-details ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-details li {
+    margin-bottom: 10px;
+    font-size: 13px;
+    color: #666;
+}
+
+.socmed-links a {
+    margin-right: 15px;
+    font-size: 20px;
+    color: black;
+    text-decoration: none;
 }
 
 /* =========================================
-   RESPONSIVE DESIGN (Media Queries)
+   9. MEDIA QUERIES
    ========================================= */
 @media screen and (max-width: 925px) {
-    .product-grid {
-        grid-template-columns: repeat(2, 1fr);
-        margin: 20px;
-    }
-
-    .modal-layout {
-        flex-direction: column;
-        gap: 20px;
-    }
-
+    #myTopnav nav { display: none; }
+    #myTopnav .icon { display: block; }
+    
+    #myTopnav.responsive { flex-direction: column; align-items: flex-start; }
+    #myTopnav.responsive nav { display: block; width: 100%; }
+    
+    .product-grid { grid-template-columns: repeat(2, 1fr); }
+    .modal-layout { flex-direction: column; }
     .gallery { width: 100%; }
-
-    .contact-main, .event-sec, .loc-sec {
-        flex-direction: column !important;
-    }
-
-    .event-text, .loc-text {
-        padding: 20px;
-    }
-
-    .history, .faqs {
-        max-width: 90%;
-    }
+    
+    .event-sec, .loc-sec { flex-direction: column !important; }
+    .event-text, .loc-text { padding: 20px; }
+    
+    footer { flex-direction: column; gap: 40px; }
+    .footer-details { flex-direction: column; gap: 40px; }
 }
