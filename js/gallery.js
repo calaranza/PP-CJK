@@ -123,3 +123,37 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+// OPEN SIZE CHART
+function openSizeChart() {
+    const chartModal = document.getElementById("sizeChartModal");
+    const chartImg = document.getElementById("chartImage");
+    
+    // Checks if the current page is 'women.html'
+    if (window.location.pathname.includes("women")) {
+        chartImg.src = "img/Women_Size_Chart.jpg"; 
+    } else {
+        // Otherwise, it defaults to the Men's chart
+        chartImg.src = "img/Men_Size_Chart.jpg";   
+    }
+    
+    chartModal.style.display = "block";
+}
+
+// CLOSE SIZE CHART
+function closeSizeChart() {
+    document.getElementById("sizeChartModal").style.display = "none";
+}
+
+// CLICK OUTSIDE TO CLOSE
+// Add this to your existing window.onclick function or add it if missing
+window.onclick = function(event) {
+    const productModal = document.getElementById("productModal");
+    const chartModal = document.getElementById("sizeChartModal");
+    
+    if (event.target == productModal) {
+        closeModal();
+    }
+    if (event.target == chartModal) {
+        closeSizeChart();
+    }
+}
