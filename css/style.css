@@ -549,15 +549,58 @@ footer section {
    9. MEDIA QUERIES
    ========================================= */
 @media screen and (max-width: 925px) {
-    #myTopnav nav a:not(.logo) { display: none; }
-    #myTopnav { justify-content: space-between; }
-    #myTopnav .icon { display: block; }
-    #myTopnav .dropdown-menu { display: none; }
+    #myTopnav {
+        display: flex;
+        flex-direction: column; 
+        align-items: flex-start;
+        padding: 20px 30px;
+    }
+
+    #myTopnav .icon {
+        display: block;
+        position: absolute; 
+        right: 30px;       
+        top: 22px;        
+    }
+
+    #myTopnav nav {
+        display: flex;
+        flex-direction: column; 
+        width: 100%;
+    }
+
+    .logo {
+        order: -1 !important; 
+        margin-bottom: 10px; 
+        display: block;
+    }
     
-    #myTopnav.responsive { align-items: flex-start; }
-    #myTopnav.responsive nav { display: flex; flex-direction: column; width: 100%; }
-    #myTopnav.responsive .dropdown .shop { pointer-events: all; }
-    
+    #myTopnav nav a:not(.logo), 
+    #myTopnav nav .dropdown {
+        display: none;
+        width: 100%;
+        margin: 10px 0;
+        border-bottom: 1px solid #f9f9f9; 
+    }
+
+    #myTopnav.responsive nav a:not(.logo),
+    #myTopnav.responsive nav .dropdown {
+        display: block; 
+    }
+
+    #myTopnav.responsive .dropdown-menu {
+        display: block;
+        position: static; 
+        width: 100%;
+        box-shadow: none;
+        padding-left: 20px;
+    }
+
+    #myTopnav.responsive .dropdown-menu a {
+        padding: 10px 0;
+    }
+
+
     .product-grid { grid-template-columns: repeat(2, 1fr); }
     .modal-layout { flex-direction: column; }
     .gallery { width: 100%; }
