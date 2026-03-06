@@ -1,14 +1,27 @@
+/* =========================================
+   BASE STYLES & SHARED LAYOUT
+   ========================================= */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-}
-
-html, body {
     min-height: 100vh;
 }
 
+html {
+    min-height: 100vh;
+}
+
+main {
+    min-height: 100vh;
+    text-align: center;
+}
+
+main h1 { 
+    font-family: "Lucidity Expand", sans-serif; 
+}
+
 .home-img {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1)), url("clothesimg.jpeg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1)), url("../img/clothesimg.jpeg");
     height: 70vh;
     background-position: center;
     background-repeat: no-repeat;
@@ -19,257 +32,112 @@ html, body {
     align-items: center;
     font-size: 2rem;
     color: white;
-    text-shadow: 0px 3px 3px rgba(255,255,255,0.5);
-}
-
-.home-img div {
-    background-color: black 0.5;
+    text-shadow: 0px 3px 3px rgba(0,0,0,0.5);
 }
 
 .home-img div h1 {
     margin: 0 5rem;
     padding: 0;
-    font-size: 2.8rem
+    font-size: 2.8rem;
 }
 
-main { text-align: center; }
+/* =========================================
+   PRODUCT COLLECTION & MODAL (LACEDA)
+   ========================================= */
 
-main h1 { font-family: "Lucidity Expand"; }
-
-.featured, .click-imgs {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+.collection {
+    padding: 40px 80px;
 }
 
-.click-imgs { margin-top: 15px; }
-
-.click-imgs div {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25);
-    width: 795px;
-    height: 300px;
-    margin-left: 15px;
-    margin-right: 15px;
-    margin-bottom: 15px;
-    background-color: rgb(155, 196, 243);
-    text-align: center;
-    line-height: 300px;
-}
-
-.click-imgs a {
-    display: block;
-    height: 100%;
-    width: 100%;
-    color: black;
-    font-weight: bold;
-    font-size: 2em;
-    text-decoration: none;
-}
-
-/* =========== CONTACT PAGE =========== */
-
-.contact-main {
-    margin-top: 45px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-
-.contact-main section {
-    max-width: 725px;
-    text-align: left;
-    margin-left: 30px;
-    margin-right: 30px;
-}
-
-.contact-descript {
-    padding: 30px;
-}
-
-.contact-descript h1 {
-    font-family: "Lucidity Expand";
-    margin: 0 0 0 1.2em;
-    padding: 0;
-}
-
-.contact-descript p {
-    margin-left: 2.5em;
-}
-
-.contact-descript ul li {
-    list-style-type: none;
-    line-height: 2;
-}
-
-.contact-descript a {
-    color: black;
-    text-decoration: none;
-}
-
-.cd-socmed-links {
-    font-size: 2em;
-    word-spacing: 5px;
-}
-
-.contact-form {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25);
-    padding: 30px;
-}
-
-.contact-form input[type=text], input[type=tel], input[type=email], textarea, select {
-    display: block;
-    width: 100%;
-    padding: 5px;
-    font-size: medium;
-    margin: 8px 0;
-    border: 1px solid #acacac;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-
-.contact-form input[type=submit] {
-    width: 100%;
-    background-color: rgb(125, 167, 216);
-    color: white;
-    font-size: 1em;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.contact-form input[type=submit]:hover {
-    background-color: rgb(137, 177, 224);
-}
-
-.contact-form span {
-    color: gray;
-    font-style: italic;
-}
-
-@media screen and (max-width: 925px) {
-    .contact-main {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .contact-main section {
-        max-width: 100%;
-        margin: 0;
-        box-shadow: none;
-    }
-
-    .contact-descript p {
-        margin-right: 1.2em;
-    }
-
-}
-
-/* =========== PRODUCT CARDS =========== */
-
-/* GRID */
 .product-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 30px;
     place-items: center;
-    margin-top: 40px;
-    margin-left: 45px;
-    margin-right: 45px;
+    margin: 40px 45px;
 }
 
 .product-card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25);
     text-align: left;
     cursor: pointer;
+    background: white;
+    transition: transform 0.2s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
 }
 
 .product-card img {
     width: 100%;
+    height: 350px; /* Adjusted for better consistency */
     object-fit: cover;
     margin-bottom: 15px;
 }
 
 .product-card b, .product-card p {
-    padding-left: 12px;
-    padding-right: 12px;
+    padding: 0 12px;
+    display: block;
 }
 
-.product-info {
-    padding: 10px;
-    text-align: left;
-}
-
-/* MODAL */
+/* MODAL STYLES */
 .modal {
     display: none;
     position: fixed;
+    z-index: 1000;
     width: 100%;
     height: 100%;
     background: rgba(0,0,0,0.6);
     top: 0;
+    left: 0;
 }
 
 .modal-content {
     background: white;
     width: 80%;
+    max-width: 1000px;
     margin: 5% auto;
     padding: 30px;
+    position: relative;
 }
 
 .close {
-    float: right;
+    position: absolute;
+    right: 20px;
+    top: 10px;
     font-size: 30px;
     cursor: pointer;
 }
 
-/* LAYOUT */
 .modal-layout {
     display: flex;
     gap: 50px;
 }
 
-/* GALLERY */
-.gallery {
-    width: 400px;
-}
-
-.main-image {
-    width: 100%;
-}
-
-.thumbnails {
-    display: flex;
-    gap: 10px;
-    margin-top: 10px;
-}
+.gallery { width: 400px; }
+.main-image { width: 100%; height: auto; }
+.thumbnails { display: flex; gap: 10px; margin-top: 10px; }
 
 .thumb {
     width: 80px;
     cursor: pointer;
     opacity: 0.6;
+    border: 1px solid transparent;
 }
 
-.thumb.active {
+.thumb.active, .thumb:hover {
     opacity: 1;
     border: 2px solid black;
 }
 
-/* PRODUCT DETAILS */
-.product-details {
-    text-align: left;
-}
+.product-details { text-align: left; flex: 1; }
+.price { font-size: 24px; font-weight: bold; margin-bottom: 20px; }
 
-.price {
-    font-size: 22px;
-    margin-bottom: 20px;
-}
-
-/* SIZE BUTTONS */
+/* SIZE & COLOR PICKERS */
 .sizes button {
     padding: 10px 15px;
-    margin: 5px;
+    margin: 5px 5px 5px 0;
     border: 1px solid black;
     background: white;
     cursor: pointer;
@@ -280,128 +148,159 @@ main h1 { font-family: "Lucidity Expand"; }
     color: white;
 }
 
-/* COLORS */
-.colors {
-    display: flex;
-    gap: 10px;
-    margin: 10px 0 20px;
-}
-
+.colors { display: flex; gap: 10px; margin: 10px 0 20px; }
 .color {
-    width: 30px;
-    height: 30px;
-    border: 1px solid black;
+    width: 35px;
+    height: 35px;
+    border: 1px solid #ddd;
     cursor: pointer;
+    border-radius: 50%; /* Optional: round swatches look more modern */
 }
 
+/* Specific Colors */
 .black { background: black; }
-.white { background: white; }
-.red { background: red; }
+.white { background: white; border: 1px solid #ccc; }
+.red   { background: red; }
+.navy  { background: #000080; }
+.grey, .gray { background: #808080; } /* Matches both spellings */
 
 .color.selected {
     outline: 3px solid black;
+    outline-offset: 2px;
 }
 
-/* ADD CART */
 .add-cart {
-    padding: 12px 25px;
+    padding: 15px 30px;
     background: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* =========================================
+   PAGES: CONTACT, ABOUT, EVENTS (MENDOZA)
+   ========================================= */
+
+/* CLICKABLE CATEGORY IMGS (Home) */
+.click-imgs {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+
+.click-imgs div {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25);
+    width: 45%; /* Responsive width */
+    min-width: 300px;
+    height: 300px;
+    margin: 15px;
+    background-color: rgb(155, 196, 243);
+    text-align: center;
+    line-height: 300px;
+}
+
+.click-imgs a {
+    display: block;
+    color: black;
+    font-weight: bold;
+    font-size: 2em;
+    text-decoration: none;
+}
+
+/* CONTACT PAGE */
+.contact-main {
+    margin-top: 45px;
+    display: flex;
+    justify-content: center;
+}
+
+.contact-main section {
+    max-width: 725px;
+    text-align: left;
+    margin: 0 30px;
+}
+
+.contact-form {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25);
+    padding: 30px;
+    background: white;
+}
+
+.contact-form input, textarea, select {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.contact-form input[type=submit] {
+    background-color: rgb(125, 167, 216);
     color: white;
     border: none;
     cursor: pointer;
 }
 
-
-
-/* =========== ABOUT PAGE =========== */
-
-.about-main h1 {
-    margin: 0 0 1.5rem 0;
-    padding: 0;
-}
-
+/* ABOUT PAGE */
 .history, .faqs {
     padding: 30px;
     max-width: 70%;
     margin: 15px auto;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25);
-}
-
-.history p {
-    text-indent: 4rem;
-    text-align: justify;
-    line-height: 1cm;
-}
-
-.faqs h1 {
-    word-wrap: break-word;
-}
-
-.faqs dl {
-    text-align: left;
-    line-height: 1cm;
+    background: white;
 }
 
 .faqs dt {
     background-color: #c1dfff;
-    padding: 0 10px;
+    padding: 10px;
     font-weight: bold;
-    margin-top: 6px;
+    margin-top: 10px;
 }
 
-@media screen and (max-width: 925px) {
-    .history, .faqs {
-        max-width: 100%;
-        box-shadow: none;
-    }
-}
-
-
-/* =========== EVENTS AND STORES PAGE =========== */
-
+/* EVENTS & STORES */
 .event-sec, .loc-sec {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 
-.event-sec:nth-child(2), .loc-sec:nth-child(2) {
+.event-sec:nth-child(even), .loc-sec:nth-child(even) {
     flex-direction: row-reverse;
-}
-
-.event-sec div, .loc-sec div {
-    width: 100%;
 }
 
 .event-img img, .loc-img img {
     width: 100%;
+    max-height: 500px;
     object-fit: cover;
 }
 
-.event-details, .loc-details {
-    margin: 45px;
-}
-
-.loc-details button {
-    cursor: pointer;
-    padding: 10px 20px;
-    background-color: rgb(125, 167, 216);
-    border: none;
-    text-transform: uppercase;
-    font-size: 1rem;
-    margin: 10px;
-}
-
-.loc-details button:hover {
-    background-color: rgb(137, 177, 224);
-}
+/* =========================================
+   RESPONSIVE DESIGN (Media Queries)
+   ========================================= */
 
 @media screen and (max-width: 925px) {
-    .event-sec, .loc-sec {
-        flex-direction: column;
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    .event-sec:nth-child(2), .loc-sec:nth-child(2) {
+    .modal-layout {
         flex-direction: column;
+        gap: 20px;
     }
-} 
+
+    .gallery { width: 100%; }
+
+    .contact-main, .event-sec, .loc-sec {
+        flex-direction: column !important;
+    }
+
+    .history, .faqs {
+        max-width: 90%;
+    }
+}
