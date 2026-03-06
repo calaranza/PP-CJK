@@ -102,7 +102,7 @@ main h1 {
    3. HOME PAGE HERO
    ========================================= */
 .home-img {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1)), url("../img/clothesimg.jpeg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1)), url("clothesimg.jpg");
     height: 70vh;
     background-position: center;
     background-repeat: no-repeat;
