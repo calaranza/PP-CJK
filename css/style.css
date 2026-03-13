@@ -77,12 +77,13 @@ main h1 {
     pointer-events: none;
 }
 
-#myTopnav .icon {
+#myTopnav .icon, #myTopnav .cart {
     display: none;
     font-size: 24px;
     cursor: pointer;
     color: black;
 }
+
 
 /* Dropdown Menu logic */
 .dropdown {
@@ -162,10 +163,6 @@ main h1 {
     width: 100%;
 }
 
-.product-card:hover {
-    transform: translateY(-5px);
-}
-
 .product-card img {
     width: 100%;
     height: 350px;
@@ -181,6 +178,36 @@ main h1 {
 .product-card b {
     font-size: 16px;
     margin-bottom: 5px;
+}
+
+.links-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    place-items: center;
+    margin: 0 45px 35px;
+}
+
+.links-grid div {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25);
+    width: 100%; 
+    background-color: rgb(125, 167, 216);
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.links-grid a {
+    display: block;
+    color: black;
+    font-weight: bold;
+    font-size: 2em;
+    text-decoration: none;
+    padding-top: 150px;
+    padding-bottom: 150px;
+}
+
+.product-card:hover, .links-grid div:hover {
+    transform: translateY(-5px);
 }
 
 /* =========================================
@@ -330,30 +357,6 @@ main h1 {
 /* =========================================
    7. CONTACT, ABOUT, & EVENTS
    ========================================= */
-.click-imgs {
-    display: flex;
-    justify-content: center;
-    margin-top: 15px;
-    flex-wrap: wrap;
-}
-
-.click-imgs div {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25);
-    width: 46%; 
-    height: 300px;
-    margin: 15px;
-    background-color: rgb(125, 167, 216);
-    text-align: center;
-    line-height: 300px;
-}
-
-.click-imgs a {
-    display: block;
-    color: black;
-    font-weight: bold;
-    font-size: 2em;
-    text-decoration: none;
-}
 
 /* CONTACT */
 .contact-main {
@@ -657,11 +660,16 @@ footer section {
         padding: 20px 30px;
     }
 
-    #myTopnav .icon {
+    #myTopnav .cart {
         display: block;
         position: absolute; 
         right: 30px;       
         top: 22px;        
+    }
+
+    #myTopnav .icon {
+        display: block;
+        position: absolute;      
     }
 
     #myTopnav nav {
@@ -695,6 +703,8 @@ footer section {
         padding-left: 20px;
     }
 
+    #myTopnav.responsive .cart { display: none; }
+
     #myTopnav.responsive .dropdown-menu a { padding: 10px 0; }
 
     .product-grid { grid-template-columns: repeat(2, 1fr); }
@@ -715,6 +725,6 @@ footer section {
 }
 
 @media screen and (max-width: 650px) {
-    .product-grid { grid-template-columns: repeat(1, 1fr); }
+    .product-grid, .links-grid { grid-template-columns: repeat(1, 1fr); }
 }
 
