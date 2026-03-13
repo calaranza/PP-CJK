@@ -1,4 +1,5 @@
-Lumine is a fictional brand used for the mock website project of Group CJK, in fulfillment of the requirements in ITS121-1L. 
+Lumine is a fictional brand created by Group CJK for the final project in ITS121-1L. 
 The website can be accessed through this link: https://calaranza.github.io/PP-CJK/index.html
 
-Group CJK: Christian Angelo Aranza, Keane Diego Laceda, and Jose Julio Mendoza
+AM4 - Group CJK: Christian Angelo Aranza, Keane Diego Laceda, and Jose Julio Mendoza
+Mapúa University, Makati
