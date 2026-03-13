@@ -1,8 +1,10 @@
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 const cartItemsContainer = document.getElementById("cartItems");
+const cartItemsContainerCheckout = document.getElementById("cartCheckoutItems");
 const cartTotalElement = document.getElementById("cartTotal");
 const checkoutBtn = document.querySelector(".checkout"); // Select the checkout button
+const placeOrderBtn = document.querySelector(".placeOrder");
 
 function displayCart() {
     if (!cartItemsContainer) return;
@@ -45,21 +47,28 @@ function removeItem(index) {
     displayCart();
 }
 
-// CHECKOUT FUNCTION 
 if (checkoutBtn) {
     checkoutBtn.addEventListener("click", function() {
+        if (cart.length === 0) return;
+
+        window.location.href="checkout.html";
+    });
+}
+ 
+if (placeOrderBtn) {
+    placeOrderBtn.addEventListener("click", function() {
         if (cart.length === 0) return;
 
        
         alert("Thank you for your purchase! Your order is being processed. 📦");
 
-        // Clear the cart
         localStorage.removeItem("cart");
         cart = [];
         
-        // Refresh display
-        displayCart();
+        window.location.href="index.html";
     });
 }
+
+
 
 displayCart();
