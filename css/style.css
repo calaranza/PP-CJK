@@ -509,7 +509,7 @@ main h1 {
 }
 
 .cart-item{
-    display:flex;
+    display: flex;
     flex-direction: row;
     justify-content:space-between;
     align-items:center;
@@ -574,7 +574,9 @@ main h1 {
 .checkout-form {
     text-align: left;
     width: 50%;
-    margin: 30px;
+    padding: 30px;
+    position: sticky;
+    top: 0;
 }   
 
 .checkout-form form {
