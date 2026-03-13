@@ -142,9 +142,6 @@ main h1 {
 /* =========================================
    4. PRODUCT COLLECTION & GRID
    ========================================= */
-.collection {
-    padding: 40px 80px;
-}
 
 .product-grid {
     display: grid;
