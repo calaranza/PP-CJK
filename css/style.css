@@ -309,10 +309,20 @@ main h1 {
 .black { background: black; }
 .white { background: white; border: 1px solid #ccc; }
 .red   { background: red; }
-.navy  { background: #000080; }
+.navy  { background: #2f324f; }
 .grey, .gray { background: #808080; }
 .peach { background: #FFDAB9; } 
-.beige { background: #F5F5DC; }
+.beige { background: #b0ab93; }
+.turquoise { background: #37968b; }
+.azuregray { background: #476c9e; }
+.flint { background: #8a8266; }
+.yellow { background: #ffdb66; }
+.autumn { background: rgb(193, 101, 52); }
+.purple { background: purple; }
+.lightblue { background: #7e8fcb; }
+.pink { background: pink; }
+.mint { background: rgb(190, 255, 238); }
+.khaki { background: rgb(200, 186, 140); }
 
 .color.selected {
     outline: 3px solid black;

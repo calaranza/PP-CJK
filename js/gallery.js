@@ -4,7 +4,7 @@
 const products = {
   crop: {
     name: "Lumine Long Sleeve Crop",
-    price: 899,
+    price: 599,
     colors: {
       white: { front: "img/Lumine_Long_Sleeve_Crop_White_Front.jpeg", back: "img/Lumine_Long_Sleeve_Crop_White_Back.jpeg" },
       black: { front: "img/Lumine_Long_Sleeve_Crop_Black_Front.jpeg", back: "img/Lumine_Long_Sleeve_Crop_Black_Back.jpeg" },
@@ -16,12 +16,12 @@ const products = {
     name: "Lumine Autumn Flower Dress",
     price: 1299,
     colors: {
-      white: { front: "img/Lumine_Flower_Dress.jpg", back: "img/Lumine_Flower_Dress_Back.jpg" } 
+      autumn: { front: "img/Lumine_Flower_Dress.jpg", back: "img/Lumine_Flower_Dress_Back.jpg" } 
     }
   },
   cardigan: {
     name: "Lumine Cardigan",
-    price: 1299,
+    price: 1199,
     colors: {
       peach: { front: "img/Womens_Cardigan.png", back: "img/Womens_Cardigan.png" } 
     }
@@ -31,6 +31,44 @@ const products = {
     price: 1199,
     colors: {
       white: { front: "img/Womens_Sweatshirt.png", back: "img/Womens_Sweatshirt.png" } 
+    }
+  },
+  blouse: {
+    name: "Lumine Blouse",
+    price: 1099,
+    colors: {
+      white: { front: "img/Lumine_Blouse_White.jpg", back: "img/Lumine_Blouse_White.jpg" },
+      yellow: { front: "img/Lumine_Blouse_Yellow.jpg", back: "img/Lumine_Blouse_Yellow.jpg" }
+    }
+  },
+  wtrousers: {
+    name: "Lumine High Waist Trousers",
+    price: 1199,
+    colors: { 
+      turquoise: { front: "img/Lumine_High_Waist_Trousers_Emerald.jpg", back: "img/Lumine_High_Waist_Trousers_Emerald.jpg" },
+      azuregray: { front: "img/Lumine_High_Waist_Trousers_Blue.jpg", back: "img/Lumine_High_Waist_Trousers_Blue.jpg" },
+      flint: { front: "img/Lumine_High_Waist_Trousers_GrayYellow.jpg", back: "img/Lumine_High_Waist_Trousers_GrayYellow.jpg" }
+    }
+  },
+  silkdress: {
+    name: "Lumine Silk Dress",
+    price: 1299,
+    colors: {
+      purple: { front: "img/Lumine_Silk_Dress_Purple.jpg", back: "img/Lumine_Silk_Dress_Purple_Back.jpg"}
+    }
+  },
+  highnecktop: {
+    name: "Lumine High Neck Top",
+    price: 999,
+    colors: {
+      white: { front: "img/Lumine_High_Neck_Top_White_Front.jpg", back: "img/Lumine_High_Neck_Top_White_Back.jpg" }
+    }
+  },
+  widedenim: {
+    name: "Lumine Wide Denim Pants",
+    price: 1199,
+    colors: {
+      lightblue: { front: "img/Lumine_Wide_Denim_Pants.jpg", back: "img/Lumine_Wide_Denim_Pants.jpg" }
     }
   },
   mshirt: {
@@ -49,16 +87,45 @@ const products = {
   },
   mhoodie: {
     name: "Lumine Comfort Hoodie",
-    price: 1199,
+    price: 1299,
     colors: {
       white: { front: "img/Mens_Hoodie.png", back: "img/Mens_Hoodie.png" }
     }
   },
   mjacket: {
     name: "Lumine Premium Leather Jacket",
-    price: 3499,
+    price: 2499,
     colors: {
       black: { front: "img/Mens_Leather_Jacket.png", back: "img/Mens_Leather_Jacket.png" }
+    }
+  },
+  poloshirt: {
+    name: "Lumine Polo Shirt",
+    price: 1099,
+    colors: {
+      lightblue: { front: "img/Lumine_Polo_Shirt.jpg", back: "img/Lumine_Polo_Shirt.jpg" }
+    }
+  },
+  shortsleeveshirt: {
+    name: "Lumine Short Sleeve Shirt",
+    price: 1199,
+    colors: {
+      pink: { front: "img/Lumine_Linen_Cotton_Short_Sleeve_Shirt_Pink.jpg", back: "img/Lumine_Linen_Cotton_Short_Sleeve_Shirt_Pink.jpg" },
+      lightblue: { front: "img/Lumine_Linen_Cotton_Short_Sleeve_Shirt_Blue.jpg", back: "img/Lumine_Linen_Cotton_Short_Sleeve_Shirt_Blue.jpg" }
+    }
+  },
+  chinesecollar: {
+    name: "Lumine Chinese Collar Shirt",
+    price: 1199,
+    colors: {
+      mint: { front: "img/Lumine_Chinese_Collar_Mint.jpg", back: "img/Lumine_Chinese_Collar_Mint.jpg"}
+    }
+  },
+  cargopants: {
+    name: "Lumine Cargo Pants",
+    price: 1599,
+    colors: {
+      khaki: { front: "img/Lumine_Cargo_Pants_Khaki.jpg", back: "img/Lumine_Cargo_Pants_Khaki.jpg" }
     }
   }
 };
